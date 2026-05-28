@@ -1,0 +1,92 @@
+{
+  "static_analysis": {
+    "filename": "714e3497-1f97-4c66-b015-ae1d7fd431dc_ransomware_simulator.py",
+    "size": 3034,
+    "file_type": "Python script, ASCII text executable, with CRLF line terminators",
+    "risk_factors": [
+      {
+        "type": "RANSOMWARE",
+        "details": "Found ransomware indicators: pay",
+        "severity": "CRITICAL",
+        "explanation": "\ud83d\udc80 This file contains ransomware patterns. It will encrypt your files and demand payment!"
+      },
+      {
+        "type": "KEYLOGGER",
+        "details": "Found keylogger indicators",
+        "severity": "HIGH",
+        "explanation": "\u2328\ufe0f This file can record everything you type - passwords, messages, credit cards!"
+      },
+      {
+        "type": "BACKDOOR",
+        "details": "Network backdoor detected",
+        "severity": "CRITICAL",
+        "explanation": "\ud83d\udd73\ufe0f This file can give hackers remote control of your computer!"
+      },
+      {
+        "type": "DATA_EXFILTRATION",
+        "details": "Network communication detected",
+        "severity": "HIGH",
+        "explanation": "\ud83d\udce4 This file can send your personal data to remote servers!"
+      },
+      {
+        "type": "PERSISTENCE",
+        "details": "Persistence mechanism detected",
+        "severity": "HIGH",
+        "explanation": "\ud83d\udd04 This file tries to run automatically every time you start your computer!"
+      },
+      {
+        "type": "OBFUSCATION",
+        "details": "Code obfuscation detected",
+        "severity": "MEDIUM",
+        "explanation": "\ud83d\udd12 The code is hidden/encoded to avoid detection by antivirus!"
+      }
+    ],
+    "safe_indicators": [],
+    "verdict": "MALICIOUS",
+    "what_this_means": "\ud83d\udd25 DANGEROUS: This file contains multiple malware indicators. DO NOT RUN!",
+    "md5": "039acfb8a6f8c0f321672ea97092a0cf",
+    "sha256": "c089b3bce179959e2e1300c75fbea6862643caf9ee91e0669f8945b004c8eaf2",
+    "entropy": 4.88,
+    "risk_score_contrib": 70
+  },
+  "behavioral_analysis": {
+    "execution_success": true,
+    "suspicious_activities": [
+      {
+        "activity": "RANSOMWARE_SIMULATION",
+        "explanation": "\u26a0\ufe0f The file simulated ransomware behavior - file encryption and ransom note creation."
+      }
+    ],
+    "normal_activities": [],
+    "what_happened": "The file executed and showed 1 suspicious behaviors.",
+    "verdict": "MALICIOUS_BEHAVIOR"
+  },
+  "ai_analysis": {
+    "vulnerabilities": [],
+    "risk_assessment": "CRITICAL - Very dangerous!",
+    "recommendations": [],
+    "plain_language_summary": "1. Backdoor/Data Stealer/Ransomware Simulator\n2. It disguises itself as a Fibonacci calculator while secretly executing malicious code, stealing system information, and simulating keylogging/ransomware behavior.\n3. NO\n4. CRITICAL\n\n\n\n",
+    "should_you_run_it": "MAYBE",
+    "analysis_time": 4.939482927322388
+  },
+  "risk_score": 80,
+  "threat_level": "\ud83d\udd25\ud83d\udd25 CRITICAL",
+  "user_friendly_summary": {
+    "verdict_icon": "\ud83d\udd25\ud83d\udd25",
+    "verdict_text": "CRITICAL",
+    "verdict_color": "darkred",
+    "one_line_summary": "This file is HIGHLY MALICIOUS! It will harm your system if executed!",
+    "risk_factors": [
+      "RANSOMWARE",
+      "KEYLOGGER",
+      "BACKDOOR",
+      "DATA_EXFILTRATION",
+      "PERSISTENCE",
+      "OBFUSCATION"
+    ],
+    "what_happened": "The file executed and showed 1 suspicious behaviors.",
+    "ai_says": "1. Backdoor/Data Stealer/Ransomware Simulator\n2. It disguises itself as a Fibonacci calculator while secretly executing malicious code, stealing system information, and simulating keylogging/ransomware behavior.\n3. NO\n4. CRITICAL\n\n\n\n",
+    "recommendation": "\ud83d\udd25\ud83d\udd25 CRITICAL: Delete NOW and run antivirus scan!",
+    "for_normal_users": "Found 6 security concerns: RANSOMWARE, KEYLOGGER, BACKDOOR"
+  }
+}

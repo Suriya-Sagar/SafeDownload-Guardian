@@ -1,0 +1,87 @@
+{
+  "static_analysis": {
+    "filename": "78507ff3-d872-41dd-ab59-833879a2e170_keylogger_simulator.js",
+    "size": 3611,
+    "file_type": "JavaScript source, ASCII text, with CRLF line terminators",
+    "risk_factors": [
+      {
+        "type": "RANSOMWARE",
+        "details": "Found ransomware indicators: pay",
+        "severity": "CRITICAL",
+        "explanation": "\ud83d\udc80 This file contains ransomware patterns. It will encrypt your files and demand payment!"
+      },
+      {
+        "type": "KEYLOGGER",
+        "details": "Found keylogger indicators",
+        "severity": "HIGH",
+        "explanation": "\u2328\ufe0f This file can record everything you type - passwords, messages, credit cards!"
+      },
+      {
+        "type": "BACKDOOR",
+        "details": "Network backdoor detected",
+        "severity": "CRITICAL",
+        "explanation": "\ud83d\udd73\ufe0f This file can give hackers remote control of your computer!"
+      },
+      {
+        "type": "DATA_EXFILTRATION",
+        "details": "Network communication detected",
+        "severity": "HIGH",
+        "explanation": "\ud83d\udce4 This file can send your personal data to remote servers!"
+      },
+      {
+        "type": "OBFUSCATION",
+        "details": "Code obfuscation detected",
+        "severity": "MEDIUM",
+        "explanation": "\ud83d\udd12 The code is hidden/encoded to avoid detection by antivirus!"
+      },
+      {
+        "type": "PRIVILEGE_ESCALATION",
+        "details": "Admin access requested",
+        "severity": "HIGH",
+        "explanation": "\ud83d\udc51 This file tries to gain administrator/root privileges!"
+      }
+    ],
+    "safe_indicators": [],
+    "verdict": "MALICIOUS",
+    "what_this_means": "\ud83d\udd25 DANGEROUS: This file contains multiple malware indicators. DO NOT RUN!",
+    "md5": "46b14ef9b554d4c3f9f1f35b7fbd038b",
+    "sha256": "d449f6ed46feef05610cf88d59ac6f21a4f4f3a9a6f7933d209435c6756a6051",
+    "entropy": 4.88,
+    "risk_score_contrib": 70
+  },
+  "behavioral_analysis": {
+    "execution_success": false,
+    "suspicious_activities": [],
+    "normal_activities": [],
+    "what_happened": "File type .js not executable in behavioral analysis.",
+    "verdict": "NO_BEHAVIOR"
+  },
+  "ai_analysis": {
+    "vulnerabilities": [],
+    "risk_assessment": "HIGH - Significant risk!",
+    "recommendations": [],
+    "plain_language_summary": "1. Keylogger\n2. This simulates keylogging, form grabbing, clipboard monitoring, and data exfiltration to test security systems.\n3. NO\n4. HIGH\n",
+    "should_you_run_it": "MAYBE",
+    "analysis_time": 4.230477809906006
+  },
+  "risk_score": 65,
+  "threat_level": "\ud83d\udea8 HIGH RISK",
+  "user_friendly_summary": {
+    "verdict_icon": "\ud83d\udea8",
+    "verdict_text": "HIGH RISK",
+    "verdict_color": "red",
+    "one_line_summary": "This file is likely malicious. Do NOT run on your actual computer!",
+    "risk_factors": [
+      "RANSOMWARE",
+      "KEYLOGGER",
+      "BACKDOOR",
+      "DATA_EXFILTRATION",
+      "OBFUSCATION",
+      "PRIVILEGE_ESCALATION"
+    ],
+    "what_happened": "File type .js not executable in behavioral analysis.",
+    "ai_says": "1. Keylogger\n2. This simulates keylogging, form grabbing, clipboard monitoring, and data exfiltration to test security systems.\n3. NO\n4. HIGH\n",
+    "recommendation": "\ud83d\udea8 Delete or quarantine this file immediately!",
+    "for_normal_users": "Found 6 security concerns: RANSOMWARE, KEYLOGGER, BACKDOOR"
+  }
+}

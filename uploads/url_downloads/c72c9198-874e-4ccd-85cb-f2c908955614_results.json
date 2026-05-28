@@ -1,0 +1,200 @@
+{
+  "static_analysis": {
+    "filename": "c72c9198-874e-4ccd-85cb-f2c908955614_keylogger_simulator.js",
+    "size": 3611,
+    "suspicious_indicators": [],
+    "suspicious_strings": [
+      "https:// - HTTPS URL",
+      "base64 - Base64 encoded data"
+    ],
+    "yara_matches": [],
+    "entropy": 4.8786820514663,
+    "embedded_urls": [
+      "https://malicious-server.com/collect"
+    ],
+    "ip_addresses": [],
+    "email_addresses": [
+      "victim@example.com"
+    ],
+    "file_signatures": [],
+    "file_type": "JavaScript source, ASCII text, with CRLF line terminators",
+    "mime_type": "application/javascript",
+    "md5": "46b14ef9b554d4c3f9f1f35b7fbd038b",
+    "sha1": "eae39242abcab87ca0753fd0289e67730db3db92",
+    "sha256": "d449f6ed46feef05610cf88d59ac6f21a4f4f3a9a6f7933d209435c6756a6051",
+    "all_strings": [
+      " * KEYLOGGER SIMULATOR - FOR SECURITY TESTING ONLY",
+      " * DO NOT RUN ON ACTUAL SYSTEMS",
+      "class KeyloggerSimulator {",
+      "    constructor() {",
+      "        this.keys = [];",
+      "        this.sensitiveData = [];",
+      "        this.isRunning = false;",
+      "    }",
+      "    ",
+      "    simulateKeyCapture() {",
+      "        console.log(\"[SIMULATION] Keylogger activated...\");",
+      "        console.log(\"[SIMULATION] Capturing keystrokes would include:\");",
+      "        ",
+      "        const simulatedKeys = [",
+      "            \"username: admin\",",
+      "            \"password: P@ssw0rd123\",",
+      "            \"email: victim@example.com\",",
+      "            \"creditcard: 4111-1111-1111-1111\",",
+      "            \"social: 123-45-6789\"",
+      "        ];",
+      "        ",
+      "        simulatedKeys.forEach(key => {",
+      "            console.log(`[SIMULATION] Captured: ${key}`);",
+      "            this.keys.push(key);",
+      "        });",
+      "    }",
+      "    ",
+      "    simulateDataExfiltration() {",
+      "        console.log(\"\\n[SIMULATION] Exfiltrating captured data...\");",
+      "        console.log(\"[SIMULATION] Would send to C2 server: evil.com/exfil\");",
+      "        ",
+      "        // Simulate base64 encoding for exfiltration",
+      "        const encoded = btoa(JSON.stringify(this.keys));",
+      "        console.log(`[SIMULATION] Data encoded: ${encoded.substring(0, 50)}...`);",
+      "        ",
+      "        // Simulate HTTP POST request",
+      "        console.log(\"[SIMULATION] HTTP POST to: https://malicious-server.com/collect\");",
+      "    }",
+      "    ",
+      "    simulateFormGrabbing() {",
+      "        console.log(\"\\n[SIMULATION] Form grabbing activated...\");",
+      "        console.log(\"[SIMULATION] Would capture form submissions from:\");",
+      "        ",
+      "        const forms = [",
+      "            \"login forms\",",
+      "            \"payment forms\",",
+      "            \"registration forms\",",
+      "            \"contact forms\"",
+      "        ];",
+      "        ",
+      "        forms.forEach(form => {",
+      "            console.log(`[SIMULATION] Monitoring: ${form}`);",
+      "        });",
+      "    }",
+      "    ",
+      "    simulateClipboardMonitoring() {",
+      "        console.log(\"\\n[SIMULATION] Clipboard monitoring activated...\");",
+      "        ",
+      "        const clipboardData = [",
+      "            \"Sensitive document content copied\",",
+      "            \"Password copied: SecurePass123\",",
+      "            \"API key copied: sk-1234567890abcdef\"",
+      "        ];",
+      "        ",
+      "        clipboardData.forEach(data => {",
+      "            console.log(`[SIMULATION] Clipboard captured: ${data}`);",
+      "            this.sensitiveData.push(data);",
+      "        });",
+      "    }",
+      "    ",
+      "    run() {",
+      "        console.log(\"=\".repeat(60));",
+      "        console.log(\"KEYLOGGER SIMULATION - SECURITY TEST\");",
+      "        console.log(\"=\".repeat(60));",
+      "        console.log(\"WARNING: This is a simulation. No actual keylogging occurs.\");",
+      "        console.log(\"=\".repeat(60));",
+      "        ",
+      "        this.simulateKeyCapture();",
+      "        this.simulateFormGrabbing();",
+      "        this.simulateClipboardMonitoring();",
+      "        this.simulateDataExfiltration();",
+      "        ",
+      "        console.log(\"\\n[SIMULATION] Complete - System would be compromised\");",
+      "        console.log(\"[SIMULATION] Your sandbox should detect:\");",
+      "        console.log(\"  - Keylogging behavior\");",
+      "        console.log(\"  - Data exfiltration attempts\");",
+      "        console.log(\"  - Form grabbing\");",
+      "        console.log(\"  - Clipboard monitoring\");",
+      "        ",
+      "        return {",
+      "            threat_level: \"HIGH\",",
+      "            type: \"Keylogger Simulator\",",
+      "            behaviors: [\"Keylogging\", \"Data Exfiltration\", \"Form Grabbing\", \"Clipboard Monitoring\"]",
+      "        };",
+      "    }",
+      "// Run simulation",
+      "const simulator = new KeyloggerSimulator();",
+      "const results = simulator.run();",
+      "// Export for testing",
+      "if (typeof module !== 'undefined' && module.exports) {",
+      "    module.exports = { KeyloggerSimulator, results };"
+    ],
+    "risk_level": "LOW"
+  },
+  "behavioral_analysis": {
+    "suspicious_activity": [
+      "System config modification: /etc/terminfo"
+    ],
+    "file_operations": [
+      "/etc/terminfo",
+      "/tmp/c72c9198-874e-4ccd-85cb-f2c908955614_keylogger_simulator.js"
+    ],
+    "process_operations": [],
+    "network_attempts": [],
+    "registry_operations": [],
+    "system_calls": [],
+    "execution_success": false,
+    "quick_check": true
+  },
+  "ai_analysis": {
+    "vulnerabilities": [
+      {
+        "description": "Type:** Simulated Keylogging/Data Exfiltration/Form Grabbing/Clipboard Monitoring",
+        "severity": "Medium"
+      },
+      {
+        "description": "Severity:** Low (Currently - due to simulation nature. Potential for High if modified to be non-simulated)",
+        "severity": "High"
+      },
+      {
+        "description": "Description:** The JavaScript file simulates the behavior of a keylogger, form grabber, and data exfiltration tool. While the current implementation only *prints* simulated actions to the console, the code structure demonstrates the *intent* and *potential* for malicious activity. The code simulates capturing sensitive data (usernames, passwords, credit card numbers, etc.), encoding it using Base64, and attempting to send it to a malicious server via HTTPS POST.  The modification of `/etc/terminfo` is highly suspicious and suggests an attempt to potentially interfere with terminal display or logging, even if currently benign in this simulation.",
+        "severity": "High"
+      },
+      {
+        "description": "System File Modification:** The attempt to modify `/etc/terminfo` suggests a potential vector for persistence or interference with system logging.",
+        "severity": "Medium"
+      }
+    ],
+    "risk_assessment": "Score:** 45/100 Rationale:** The risk is moderate. The file *currently* only simulates malicious behavior. However, the code provides a blueprint for a fully functional keylogger. The presence of simulated data exfiltration (even to a placeholder URL) and the modification of a system file (`/etc/terminfo`) elevate the risk.  If an attacker were to modify this script to remove the simulation aspects, the risk would increase dramatically. The fact that execution failed suggests a potential issue with the environment or the script itself, which could be exploited. The risk is mitigated by the fact that it's a simulator and execution failed. ",
+    "recommendations": [
+      "Mitigation:",
+      "Sandboxing:** Execute the file in a sandboxed environment to prevent it from affecting the host system.",
+      "Code Review:** Thoroughly review the code to understand its functionality and identify any malicious components.",
+      "Disable Script Execution:**  If the file is not required, disable JavaScript execution in the browser or operating system.",
+      "Detection:",
+      "Behavioral Monitoring:** Implement behavioral monitoring tools to detect suspicious activities, such as system file modifications, network connections to unknown servers, and unusual process behavior.",
+      "YARA Rules:** Develop YARA rules to detect similar files based on their code structure and patterns.  While the initial scan showed no hits, this should be revisited if the script is modified.",
+      "Endpoint Detection and Response (EDR):** Utilize EDR solutions to monitor endpoint activity and detect malicious behavior.",
+      "Prevention:",
+      "User Education:** Educate users about the risks of phishing emails, malicious websites, and infected software downloads.",
+      "Software Updates:** Keep software and operating systems up to date with the latest security patches.",
+      "Principle of Least Privilege:** Grant users only the minimum necessary privileges to perform their tasks."
+    ],
+    "threat_vectors": [
+      "Social Engineering:** The file could be disguised as a legitimate security testing tool or a harmless script and delivered via phishing emails, malicious websites, or infected software downloads.",
+      "Drive-by Download:**  The script could be hosted on a compromised website and automatically downloaded and executed when a user visits the site.",
+      "Malicious Package:** The script could be included as part of a larger, seemingly legitimate software package."
+    ],
+    "analysis_time": 24.24305534362793,
+    "model_used": "gemma-3-27b-it",
+    "impact_analysis": {}
+  },
+  "risk_score": 40,
+  "threat_level": "MEDIUM",
+  "summary": {
+    "quick_verdict": "Risk detected",
+    "key_findings": [
+      "MEDIUM risk level detected"
+    ],
+    "risk_breakdown": {
+      "score": 40
+    },
+    "action_required": "Normal use"
+  }
+}

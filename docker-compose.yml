@@ -1,0 +1,45 @@
+services:
+  sandbox:
+    build: .
+    container_name: file-sandbox
+    ports:
+      - "5000:5000"
+    volumes:
+      # Mount uploads directory for persistence
+      - ./uploads:/app/uploads
+      # Mount Docker socket to control Docker from container
+      - /var/run/docker.sock:/var/run/docker.sock
+      # Mount .env file for API keys
+      - ./.env:/app/.env
+      # Mount source code for development (optional - remove in production)
+      - ./:/app
+    environment:
+      - FLASK_ENV=development
+      - PYTHONUNBUFFERED=1
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - MAX_CONTAINERS=10
+      - CONTAINER_MEMORY_LIMIT=256m
+    extra_hosts:
+      - "host.docker.internal:host-gateway" 
+    privileged: true  # Required for Docker-in-Docker
+    restart: unless-stopped
+    networks:
+      - sandbox-network
+    # Health check to ensure container is running
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+        reservations:
+          memory: 512M
+
+networks:
+  sandbox-network:
+    driver: bridge

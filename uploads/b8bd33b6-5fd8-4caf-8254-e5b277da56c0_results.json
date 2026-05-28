@@ -1,0 +1,66 @@
+{
+  "static_analysis": {
+    "filename": "b8bd33b6-5fd8-4caf-8254-e5b277da56c0_test.js",
+    "size": 754,
+    "file_type": "ASCII text, with CRLF line terminators",
+    "risk_factors": [
+      {
+        "type": "RANSOMWARE",
+        "details": "Found ransomware indicators: pay",
+        "severity": "CRITICAL",
+        "explanation": "\ud83d\udc80 This file contains ransomware patterns. It will encrypt your files and demand payment!"
+      },
+      {
+        "type": "KEYLOGGER",
+        "details": "Found keylogger indicators",
+        "severity": "HIGH",
+        "explanation": "\u2328\ufe0f This file can record everything you type - passwords, messages, credit cards!"
+      },
+      {
+        "type": "DATA_EXFILTRATION",
+        "details": "Network communication detected",
+        "severity": "HIGH",
+        "explanation": "\ud83d\udce4 This file can send your personal data to remote servers!"
+      }
+    ],
+    "safe_indicators": [],
+    "verdict": "MALICIOUS",
+    "what_this_means": "\ud83d\udd25 DANGEROUS: This file contains multiple malware indicators. DO NOT RUN!",
+    "md5": "47ded633a6b0172bf8dacecc48784673",
+    "sha256": "4252fafe6e2c126a897bf04a370bc8d46a39fb4ff4f9615ce42852e191791bc7",
+    "entropy": 4.68,
+    "risk_score_contrib": 70
+  },
+  "behavioral_analysis": {
+    "execution_success": false,
+    "suspicious_activities": [],
+    "normal_activities": [],
+    "what_happened": "File type .js not executable in behavioral analysis.",
+    "verdict": "NO_BEHAVIOR"
+  },
+  "ai_analysis": {
+    "vulnerabilities": [],
+    "risk_assessment": "CRITICAL - Very dangerous!",
+    "recommendations": [],
+    "plain_language_summary": "1. Other (Data Stealer, Miner, Keylogger)\n2. It steals user data (username, cookies), runs a cryptocurrency miner in the background, and logs keystrokes, sending them to malicious servers.\n3. NO\n4. CRITICAL\n\n\n\n",
+    "should_you_run_it": "NO",
+    "analysis_time": 4.666069984436035
+  },
+  "risk_score": 54,
+  "threat_level": "\ud83d\udea8 HIGH RISK",
+  "user_friendly_summary": {
+    "verdict_icon": "\ud83d\udea8",
+    "verdict_text": "HIGH RISK",
+    "verdict_color": "red",
+    "one_line_summary": "This file is likely malicious. Do NOT run on your actual computer!",
+    "risk_factors": [
+      "RANSOMWARE",
+      "KEYLOGGER",
+      "DATA_EXFILTRATION"
+    ],
+    "what_happened": "File type .js not executable in behavioral analysis.",
+    "ai_says": "1. Other (Data Stealer, Miner, Keylogger)\n2. It steals user data (username, cookies), runs a cryptocurrency miner in the background, and logs keystrokes, sending them to malicious servers.\n3. NO\n4. CRITICAL\n\n\n\n",
+    "recommendation": "\ud83d\udea8 Delete or quarantine this file immediately!",
+    "for_normal_users": "Found 3 security concerns: RANSOMWARE, KEYLOGGER, DATA_EXFILTRATION"
+  }
+}

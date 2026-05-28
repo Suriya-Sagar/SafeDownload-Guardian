@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker File Sandbox Analyzer</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔒 Docker File Sandbox Analyzer</h1>
+            <p>Upload a file or enter a URL to safely analyze it in an isolated container</p>
+        </header>
+
+        <main>
+            <!-- URL Input Section -->
+            <div class="url-section">
+                <div class="url-input-container">
+                    <input type="text" id="urlInput" placeholder="Enter file URL to analyze (e.g., http://192.168.1.4:8000/files/test.py)" class="url-input">
+                    <button id="analyzeUrlBtn" class="btn btn-primary">🔍 Analyze URL</button>
+                </div>
+                <p class="url-help">Files downloaded from URLs are analyzed without saving to your system</p>
+            </div>
+
+            <!-- File Upload Section -->
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <input type="file" id="fileInput" style="display: none;">
+                    <div class="upload-content">
+                        <span class="upload-icon">📁</span>
+                        <h3>Drag & Drop or Click to Upload</h3>
+                        <p>Supported files: .exe, .dll, .scr, .bat, .ps1, .pdf, .doc, .docx, .zip, .py, .js, .sh</p>
+                        <p class="file-limit">Max size: 500MB</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analysis Progress -->
+            <div class="analysis-progress" id="analysisProgress" style="display: none;">
+                <h3>Analysis in Progress</h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+                </div>
+                <p id="progressStatus">Initializing...</p>
+                <p id="analysisId"></p>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-header">
+                    <h2>Analysis Results</h2>
+                    <div class="threat-indicator" id="threatIndicator">
+                        <span class="threat-level" id="threatLevel">SAFE</span>
+                    </div>
+                </div>
+
+                <div class="risk-score">
+                    <div class="score-circle" id="riskScore">0</div>
+                    <span>Risk Score</span>
+                </div>
+
+                <!-- Tabs -->
+                <div class="tabs">
+                    <button class="tab-button active" onclick="showTab('static')">📊 Static Analysis</button>
+                    <button class="tab-button" onclick="showTab('behavioral')">🔄 Behavioral Analysis</button>
+                    <button class="tab-button" onclick="showTab('ai')">🤖 AI Analysis</button>
+                    <button class="tab-button" onclick="showTab('summary')">📋 Summary</button>
+                </div>
+
+                <!-- Tab Contents -->
+                <div class="tab-content active" id="staticTab">
+                    <div class="analysis-details" id="staticAnalysis">
+                        <p>Loading static analysis...</p>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="behavioralTab">
+                    <div class="analysis-details" id="behavioralAnalysis">
+                        <p>Loading behavioral analysis...</p>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="aiTab">
+                    <div class="analysis-details" id="aiAnalysis">
+                        <p>Loading AI analysis...</p>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="summaryTab">
+                    <div class="analysis-details" id="summaryAnalysis">
+                        <p>Loading summary...</p>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-clean" onclick="cleanup()">🧹 Clean Up Resources</button>
+                    <button class="btn btn-new" onclick="resetInterface()">📤 Analyze New File</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

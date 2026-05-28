@@ -1,0 +1,66 @@
+{
+  "static_analysis": {
+    "filename": "8cdf48b5-d971-4eb8-8af9-ec834c7e3cdc_keylogger_simulator.js",
+    "size": 4901,
+    "file_type": "JavaScript source, ASCII text, with CRLF line terminators",
+    "risk_factors": [
+      {
+        "type": "KEYLOGGER",
+        "details": "Found keylogger indicators",
+        "severity": "HIGH",
+        "explanation": "\u2328\ufe0f This file can record everything you type - passwords, messages, credit cards!"
+      },
+      {
+        "type": "BACKDOOR",
+        "details": "Network backdoor detected",
+        "severity": "CRITICAL",
+        "explanation": "\ud83d\udd73\ufe0f This file can give hackers remote control of your computer!"
+      },
+      {
+        "type": "DATA_EXFILTRATION",
+        "details": "Network communication detected",
+        "severity": "HIGH",
+        "explanation": "\ud83d\udce4 This file can send your personal data to remote servers!"
+      }
+    ],
+    "safe_indicators": [],
+    "verdict": "MALICIOUS",
+    "what_this_means": "\ud83d\udd25 DANGEROUS: This file contains multiple malware indicators. DO NOT RUN!",
+    "md5": "80f571b3b45404f30acf89197b1aeb83",
+    "sha256": "10a12fe29a99f2ba79f053da4e7c7411a0733047072f9103daf67c9f20598dac",
+    "entropy": 4.61,
+    "risk_score_contrib": 70
+  },
+  "behavioral_analysis": {
+    "execution_success": false,
+    "suspicious_activities": [],
+    "normal_activities": [],
+    "what_happened": "File type .js not executable in behavioral analysis.",
+    "verdict": "NO_BEHAVIOR"
+  },
+  "ai_analysis": {
+    "vulnerabilities": [],
+    "risk_assessment": "CRITICAL - Very dangerous!",
+    "recommendations": [],
+    "plain_language_summary": "1. Keylogger/Other (multi-component malware)\n2. It disguises itself as a calculator while stealing browser data, keylogging, crypto mining, and collecting user fingerprints.\n3. NO\n4. CRITICAL\n\n\n\n",
+    "should_you_run_it": "MAYBE",
+    "analysis_time": 2.4498109817504883
+  },
+  "risk_score": 49,
+  "threat_level": "\u26a0\ufe0f\u26a0\ufe0f MEDIUM RISK",
+  "user_friendly_summary": {
+    "verdict_icon": "\u26a0\ufe0f\u26a0\ufe0f",
+    "verdict_text": "MEDIUM RISK",
+    "verdict_color": "orange",
+    "one_line_summary": "This file shows concerning behavior. Do not run unless in isolated environment.",
+    "risk_factors": [
+      "KEYLOGGER",
+      "BACKDOOR",
+      "DATA_EXFILTRATION"
+    ],
+    "what_happened": "File type .js not executable in behavioral analysis.",
+    "ai_says": "1. Keylogger/Other (multi-component malware)\n2. It disguises itself as a calculator while stealing browser data, keylogging, crypto mining, and collecting user fingerprints.\n3. NO\n4. CRITICAL\n\n\n\n",
+    "recommendation": "\u26a0\ufe0f\u26a0\ufe0f Run only in isolated sandbox environment",
+    "for_normal_users": "Found 3 security concerns: KEYLOGGER, BACKDOOR, DATA_EXFILTRATION"
+  }
+}

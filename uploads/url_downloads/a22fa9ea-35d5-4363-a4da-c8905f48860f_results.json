@@ -1,0 +1,146 @@
+{
+  "static_analysis": {
+    "filename": "a22fa9ea-35d5-4363-a4da-c8905f48860f_ransomware_simulator.py",
+    "size": 3674,
+    "file_type": "Python script, Unicode text, UTF-8 text executable, with CRLF line terminators",
+    "risk_factors": [],
+    "safe_indicators": [],
+    "verdict": "INCONCLUSIVE",
+    "what_this_means": "",
+    "md5": "0e6149dfc302a21a084e066d791b5178",
+    "sha256": "1ed87e3f7fc0b8bf4e0f14a22b1584d6f8eb48dd21b56b42dbad2f86f1b82b19",
+    "error": "'float' object has no attribute 'bit_length'"
+  },
+  "behavioral_analysis": {
+    "execution_success": true,
+    "suspicious_activities": [
+      {
+        "activity": "SYSTEM_BINARY_MODIFICATION",
+        "path": "/bin/slabtop",
+        "explanation": "\u26a0\ufe0f This file tried to modify system binaries - EXTREMELY DANGEROUS!"
+      },
+      {
+        "activity": "SYSTEM_BINARY_MODIFICATION",
+        "path": "/bin/hugetop",
+        "explanation": "\u26a0\ufe0f This file tried to modify system binaries - EXTREMELY DANGEROUS!"
+      },
+      {
+        "activity": "SYSTEM_BINARY_MODIFICATION",
+        "path": "/bin/ps",
+        "explanation": "\u26a0\ufe0f This file tried to modify system binaries - EXTREMELY DANGEROUS!"
+      },
+      {
+        "activity": "SYSTEM_BINARY_MODIFICATION",
+        "path": "/bin/watch",
+        "explanation": "\u26a0\ufe0f This file tried to modify system binaries - EXTREMELY DANGEROUS!"
+      },
+      {
+        "activity": "SYSTEM_BINARY_MODIFICATION",
+        "path": "/bin/pidwait",
+        "explanation": "\u26a0\ufe0f This file tried to modify system binaries - EXTREMELY DANGEROUS!"
+      },
+      {
+        "activity": "SYSTEM_BINARY_MODIFICATION",
+        "path": "/bin/w",
+        "explanation": "\u26a0\ufe0f This file tried to modify system binaries - EXTREMELY DANGEROUS!"
+      },
+      {
+        "activity": "SYSTEM_BINARY_MODIFICATION",
+        "path": "/bin/pidof",
+        "explanation": "\u26a0\ufe0f This file tried to modify system binaries - EXTREMELY DANGEROUS!"
+      },
+      {
+        "activity": "SYSTEM_BINARY_MODIFICATION",
+        "path": "/bin/tload",
+        "explanation": "\u26a0\ufe0f This file tried to modify system binaries - EXTREMELY DANGEROUS!"
+      },
+      {
+        "activity": "SYSTEM_BINARY_MODIFICATION",
+        "path": "/bin/vmstat",
+        "explanation": "\u26a0\ufe0f This file tried to modify system binaries - EXTREMELY DANGEROUS!"
+      }
+    ],
+    "normal_activities": [
+      {
+        "activity": "FILE_OPERATION",
+        "path": "/var",
+        "explanation": "File was deleted during execution."
+      },
+      {
+        "activity": "FILE_OPERATION",
+        "path": "/var/log",
+        "explanation": "File was deleted during execution."
+      },
+      {
+        "activity": "FILE_OPERATION",
+        "path": "/var/log/apk.log",
+        "explanation": "File was modified during execution."
+      },
+      {
+        "activity": "FILE_OPERATION",
+        "path": "/bin",
+        "explanation": "File was deleted during execution."
+      },
+      {
+        "activity": "FILE_OPERATION",
+        "path": "/lib",
+        "explanation": "File was deleted during execution."
+      },
+      {
+        "activity": "FILE_OPERATION",
+        "path": "/lib/apk",
+        "explanation": "File was deleted during execution."
+      },
+      {
+        "activity": "FILE_OPERATION",
+        "path": "/lib/apk/db",
+        "explanation": "File was deleted during execution."
+      },
+      {
+        "activity": "FILE_OPERATION",
+        "path": "/lib/apk/db/installed",
+        "explanation": "File was deleted during execution."
+      },
+      {
+        "activity": "FILE_OPERATION",
+        "path": "/lib/apk/db/lock",
+        "explanation": "File was modified during execution."
+      },
+      {
+        "activity": "FILE_OPERATION",
+        "path": "/lib/apk/db/scripts.tar.gz",
+        "explanation": "File was deleted during execution."
+      },
+      {
+        "activity": "FILE_OPERATION",
+        "path": "/lib/apk/db/triggers",
+        "explanation": "File was deleted during execution."
+      }
+    ],
+    "network_connections": [],
+    "file_changes": [],
+    "what_happened": "The file executed and showed 9 suspicious behaviors.",
+    "verdict": "MALICIOUS_BEHAVIOR"
+  },
+  "ai_analysis": {
+    "vulnerabilities": [],
+    "risk_assessment": "",
+    "recommendations": [],
+    "plain_language_summary": "Here's the breakdown of that file:\n\n1. ONE SENTENCE SUMMARY: This file is a Python program designed to *simulate* what a ransomware attack might look like, but doesn\u2019t appear to be a real virus itself.\n\n2. IS IT SAFE TO RUN? MAYBE \u2013 it\u2019s designed to *act* like ransomware, so while it isn\u2019t a virus, running it could still cause disruption.\n\n3. WHAT COULD HAPPEN? If you run it, it might pretend to encrypt your files (make them unreadable) and display a ransom message, even though it likely won\u2019t *actually* encrypt them permanently. It's a test, but a scary one!\n\n4. RECOMMENDATION: Unless you *specifically* need to test ransomware simulation software, I\u2019d recommend leaving this file alone and not running it \u2013 it could be alarming even if it\u2019s not truly harmful.\n\n\n\n",
+    "should_you_run_it": "NO",
+    "analysis_time": 8.528096437454224
+  },
+  "risk_score": 40,
+  "threat_level": "\u26a0\ufe0f\u26a0\ufe0f MEDIUM RISK",
+  "user_friendly_summary": {
+    "verdict_icon": "\u26a0\ufe0f\u26a0\ufe0f",
+    "verdict_text": "MEDIUM RISK",
+    "verdict_color": "orange",
+    "one_line_summary": "This file shows concerning behavior. Do not run unless you trust the source.",
+    "risk_factors": [],
+    "what_happened": "The file executed and showed 9 suspicious behaviors.",
+    "ai_says": "Here's the breakdown of that file:\n\n1. ONE SENTENCE SUMMARY: This file is a Python program designed to *simulate* what a ransomware attack might look like, but doesn\u2019t appear to be a real virus itself.\n\n2. IS IT SAFE TO RUN? MAYBE \u2013 it\u2019s designed to *act* like ransomware, so while it isn\u2019t a virus, ",
+    "recommendation": "\u26a0\ufe0f\u26a0\ufe0f Do not run this file on your main computer. Use isolated environment only.",
+    "for_normal_users": "No problems found. This file looks clean."
+  }
+}

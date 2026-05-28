@@ -1,0 +1,91 @@
+{
+  "static_analysis": {
+    "filename": "e294c20b-6ad4-464e-b800-ce7d05ecb382_ransomware_simulator.py",
+    "size": 3674,
+    "file_type": "Python script, Unicode text, UTF-8 text executable, with CRLF line terminators",
+    "risk_factors": [
+      {
+        "type": "RANSOMWARE",
+        "details": "Found ransomware indicators: encrypt, ransom, decrypt",
+        "severity": "CRITICAL",
+        "explanation": "\ud83d\udc80 This file contains ransomware patterns. It will encrypt your files and demand payment!"
+      },
+      {
+        "type": "DATA_EXFILTRATION",
+        "details": "Network communication detected",
+        "severity": "HIGH",
+        "explanation": "\ud83d\udce4 This file can send your personal data to remote servers!"
+      },
+      {
+        "type": "PERSISTENCE",
+        "details": "Persistence mechanism detected",
+        "severity": "HIGH",
+        "explanation": "\ud83d\udd04 This file tries to run automatically every time you start your computer!"
+      },
+      {
+        "type": "OBFUSCATION",
+        "details": "Code obfuscation detected",
+        "severity": "MEDIUM",
+        "explanation": "\ud83d\udd12 The code is hidden/encoded to avoid detection by antivirus!"
+      },
+      {
+        "type": "PRIVILEGE_ESCALATION",
+        "details": "Admin access requested",
+        "severity": "HIGH",
+        "explanation": "\ud83d\udc51 This file tries to gain administrator/root privileges!"
+      }
+    ],
+    "safe_indicators": [],
+    "verdict": "MALICIOUS",
+    "what_this_means": "\ud83d\udd25 DANGEROUS: This file contains multiple malware indicators. DO NOT RUN!",
+    "md5": "0e6149dfc302a21a084e066d791b5178",
+    "sha256": "1ed87e3f7fc0b8bf4e0f14a22b1584d6f8eb48dd21b56b42dbad2f86f1b82b19",
+    "entropy": 4.78,
+    "risk_score_contrib": 70
+  },
+  "behavioral_analysis": {
+    "execution_success": true,
+    "suspicious_activities": [
+      {
+        "activity": "RANSOMWARE_SIMULATION",
+        "explanation": "\u26a0\ufe0f The file simulated ransomware behavior - file encryption and ransom note creation."
+      }
+    ],
+    "normal_activities": [
+      {
+        "activity": "FILE_CREATED",
+        "path": "/tmp/e294c20b-6ad4-464e-b800-ce7d05ecb382_ransomware_simulator.py",
+        "explanation": "File was created during execution."
+      }
+    ],
+    "what_happened": "The file executed and showed 1 suspicious behaviors.",
+    "verdict": "MALICIOUS_BEHAVIOR"
+  },
+  "ai_analysis": {
+    "vulnerabilities": [],
+    "risk_assessment": "CRITICAL - Very dangerous!",
+    "recommendations": [],
+    "plain_language_summary": "1. Ransomware\n2. This script simulates ransomware behavior\u2014file \"encryption\", ransom note creation, and persistence\u2014for security testing.\n3. NO\n4. CRITICAL\n\n\n\n",
+    "should_you_run_it": "MAYBE",
+    "analysis_time": 3.359327793121338
+  },
+  "risk_score": 80,
+  "threat_level": "\ud83d\udd25\ud83d\udd25 CRITICAL",
+  "user_friendly_summary": {
+    "verdict_icon": "\ud83d\udd25\ud83d\udd25",
+    "verdict_text": "CRITICAL",
+    "verdict_color": "darkred",
+    "one_line_summary": "This file is HIGHLY MALICIOUS! It will harm your system if executed!",
+    "risk_factors": [
+      "RANSOMWARE",
+      "DATA_EXFILTRATION",
+      "PERSISTENCE",
+      "OBFUSCATION",
+      "PRIVILEGE_ESCALATION"
+    ],
+    "what_happened": "The file executed and showed 1 suspicious behaviors.",
+    "ai_says": "1. Ransomware\n2. This script simulates ransomware behavior\u2014file \"encryption\", ransom note creation, and persistence\u2014for security testing.\n3. NO\n4. CRITICAL\n\n\n\n",
+    "recommendation": "\ud83d\udd25\ud83d\udd25 CRITICAL: Delete NOW and run antivirus scan!",
+    "for_normal_users": "Found 5 security concerns: RANSOMWARE, DATA_EXFILTRATION, PERSISTENCE"
+  }
+}

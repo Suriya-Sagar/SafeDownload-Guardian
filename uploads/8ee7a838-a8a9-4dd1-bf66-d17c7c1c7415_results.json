@@ -1,0 +1,370 @@
+{
+  "static_analysis": {
+    "filename": "8ee7a838-a8a9-4dd1-bf66-d17c7c1c7415_application.js",
+    "size": 1018,
+    "suspicious_indicators": [],
+    "suspicious_strings": [],
+    "yara_matches": [],
+    "entropy": 0,
+    "embedded_urls": [],
+    "ip_addresses": [],
+    "email_addresses": [],
+    "file_signatures": [],
+    "file_type": "ASCII text, with CRLF line terminators",
+    "mime_type": "text/plain",
+    "md5": "c5dfab9f2a88fd41c19703cc849262ec",
+    "sha1": "46b5f14b629c991b27e3c2a9ed3d6d9ea19f22b4",
+    "sha256": "5e58b60935d39fa563ffdf74dbe41a5348ee6bc39a205ef546680010cf4a2a4e",
+    "error": "'float' object has no attribute 'bit_length'"
+  },
+  "behavioral_analysis": {
+    "suspicious_activity": [
+      "File operation: /usr/bin/strace",
+      "File operation: /usr/bin/strace-log-merge",
+      "File operation: /usr/lib/libbsd.so.0.12.2",
+      "File operation: /usr/lib/liblzma.so.5",
+      "File operation: /usr/lib/libutmps.so.0.1",
+      "File operation: /usr/lib/libintl.so.8",
+      "File operation: /usr/lib/libbz2.so.1.0.8",
+      "File operation: /usr/lib/libdw-0.194.so",
+      "File operation: /usr/lib/libfts.so.0",
+      "File operation: /usr/lib/liblzma.so.5.8.2",
+      "File operation: /usr/lib/libelf.so.1",
+      "File operation: /usr/lib/libmd.so.0",
+      "File operation: /usr/lib/libproc2.so.1",
+      "File operation: /usr/lib/libutmps.so.0.1.3.1",
+      "File operation: /usr/lib/libbsd.so.0",
+      "File operation: /usr/lib/libmd.so.0.1.0",
+      "File operation: /usr/lib/libncursesw.so.6",
+      "File operation: /usr/lib/libelf-0.194.so",
+      "File operation: /usr/lib/libfts.so.0.0.0",
+      "File operation: /usr/lib/libskarnet.so.2.14",
+      "File operation: /usr/lib/libskarnet.so.2.14.4.0",
+      "File operation: /usr/lib/libbz2.so.1",
+      "File operation: /usr/lib/libdw.so.1",
+      "File operation: /usr/lib/libintl.so.8.4.3",
+      "File operation: /usr/lib/libncursesw.so.6.5",
+      "File operation: /usr/lib/libproc2.so.1.0.0",
+      "File operation: /usr/lib/libzstd.so.1",
+      "File operation: /usr/lib/libzstd.so.1.5.7",
+      "System config modification: /etc/terminfo",
+      "System config modification: /etc/terminfo/a",
+      "System config modification: /etc/terminfo/a/alacritty",
+      "System config modification: /etc/terminfo/a/ansi",
+      "System config modification: /etc/terminfo/l",
+      "System config modification: /etc/terminfo/l/linux",
+      "System config modification: /etc/terminfo/p",
+      "System config modification: /etc/terminfo/p/putty",
+      "System config modification: /etc/terminfo/p/putty-256color",
+      "System config modification: /etc/terminfo/t",
+      "System config modification: /etc/terminfo/t/tmux",
+      "System config modification: /etc/terminfo/t/tmux-256color",
+      "System config modification: /etc/terminfo/t/terminator",
+      "System config modification: /etc/terminfo/t/terminology",
+      "System config modification: /etc/terminfo/t/terminology-0.6.1",
+      "System config modification: /etc/terminfo/t/terminology-1.0.0",
+      "System config modification: /etc/terminfo/t/terminology-1.8.1",
+      "System config modification: /etc/terminfo/v",
+      "System config modification: /etc/terminfo/v/vt100",
+      "System config modification: /etc/terminfo/v/vt102",
+      "System config modification: /etc/terminfo/v/vt200",
+      "System config modification: /etc/terminfo/v/vt220",
+      "System config modification: /etc/terminfo/v/vt52",
+      "System config modification: /etc/terminfo/v/vte",
+      "System config modification: /etc/terminfo/v/vte-256color",
+      "System config modification: /etc/terminfo/d",
+      "System config modification: /etc/terminfo/d/dumb",
+      "System config modification: /etc/terminfo/g",
+      "System config modification: /etc/terminfo/g/gnome",
+      "System config modification: /etc/terminfo/g/gnome-256color",
+      "System config modification: /etc/terminfo/k",
+      "System config modification: /etc/terminfo/k/konsole",
+      "System config modification: /etc/terminfo/k/konsole-256color",
+      "System config modification: /etc/terminfo/k/konsole-linux",
+      "System config modification: /etc/terminfo/r",
+      "System config modification: /etc/terminfo/r/rxvt",
+      "System config modification: /etc/terminfo/r/rxvt-256color",
+      "System config modification: /etc/terminfo/s",
+      "System config modification: /etc/terminfo/s/st-0.8",
+      "System config modification: /etc/terminfo/s/st-0.8.5",
+      "System config modification: /etc/terminfo/s/st-16color",
+      "System config modification: /etc/terminfo/s/st-256color",
+      "System config modification: /etc/terminfo/s/st-direct",
+      "System config modification: /etc/terminfo/s/screen",
+      "System config modification: /etc/terminfo/s/screen-256color",
+      "System config modification: /etc/terminfo/s/st-0.6",
+      "System config modification: /etc/terminfo/s/st-0.7",
+      "System config modification: /etc/terminfo/s/sun",
+      "System config modification: /etc/terminfo/x",
+      "System config modification: /etc/terminfo/x/xterm-256color",
+      "System config modification: /etc/terminfo/x/xterm-color",
+      "System config modification: /etc/terminfo/x/xterm-xfree86",
+      "System config modification: /etc/terminfo/x/xterm",
+      "File operation: /var/log/apk.log",
+      "System binary modification: /bin/hugetop",
+      "System binary modification: /bin/vmstat",
+      "System binary modification: /bin/w",
+      "System binary modification: /bin/tload",
+      "System binary modification: /bin/slabtop",
+      "System binary modification: /bin/pidwait",
+      "File operation: /lib/apk/db/lock"
+    ],
+    "file_operations": [
+      "/tmp/8ee7a838-a8a9-4dd1-bf66-d17c7c1c7415_application.js",
+      "/usr/bin/strace",
+      "/usr/bin/strace-log-merge",
+      "/usr/lib/libbsd.so.0.12.2",
+      "/usr/lib/liblzma.so.5",
+      "/usr/lib/libutmps.so.0.1",
+      "/usr/lib/libintl.so.8",
+      "/usr/lib/libbz2.so.1.0.8",
+      "/usr/lib/libdw-0.194.so",
+      "/usr/lib/libfts.so.0",
+      "/usr/lib/liblzma.so.5.8.2",
+      "/usr/lib/libelf.so.1",
+      "/usr/lib/libmd.so.0",
+      "/usr/lib/libproc2.so.1",
+      "/usr/lib/libutmps.so.0.1.3.1",
+      "/usr/lib/libbsd.so.0",
+      "/usr/lib/libmd.so.0.1.0",
+      "/usr/lib/libncursesw.so.6",
+      "/usr/lib/libelf-0.194.so",
+      "/usr/lib/libfts.so.0.0.0",
+      "/usr/lib/libskarnet.so.2.14",
+      "/usr/lib/libskarnet.so.2.14.4.0",
+      "/usr/lib/libbz2.so.1",
+      "/usr/lib/libdw.so.1",
+      "/usr/lib/libintl.so.8.4.3",
+      "/usr/lib/libncursesw.so.6.5",
+      "/usr/lib/libproc2.so.1.0.0",
+      "/usr/lib/libzstd.so.1",
+      "/usr/lib/libzstd.so.1.5.7",
+      "/etc/terminfo",
+      "/etc/terminfo/a",
+      "/etc/terminfo/a/alacritty",
+      "/etc/terminfo/a/ansi",
+      "/etc/terminfo/l",
+      "/etc/terminfo/l/linux",
+      "/etc/terminfo/p",
+      "/etc/terminfo/p/putty",
+      "/etc/terminfo/p/putty-256color",
+      "/etc/terminfo/t",
+      "/etc/terminfo/t/tmux",
+      "/etc/terminfo/t/tmux-256color",
+      "/etc/terminfo/t/terminator",
+      "/etc/terminfo/t/terminology",
+      "/etc/terminfo/t/terminology-0.6.1",
+      "/etc/terminfo/t/terminology-1.0.0",
+      "/etc/terminfo/t/terminology-1.8.1",
+      "/etc/terminfo/v",
+      "/etc/terminfo/v/vt100",
+      "/etc/terminfo/v/vt102",
+      "/etc/terminfo/v/vt200",
+      "/etc/terminfo/v/vt220",
+      "/etc/terminfo/v/vt52",
+      "/etc/terminfo/v/vte",
+      "/etc/terminfo/v/vte-256color",
+      "/etc/terminfo/d",
+      "/etc/terminfo/d/dumb",
+      "/etc/terminfo/g",
+      "/etc/terminfo/g/gnome",
+      "/etc/terminfo/g/gnome-256color",
+      "/etc/terminfo/k",
+      "/etc/terminfo/k/konsole",
+      "/etc/terminfo/k/konsole-256color",
+      "/etc/terminfo/k/konsole-linux",
+      "/etc/terminfo/r",
+      "/etc/terminfo/r/rxvt",
+      "/etc/terminfo/r/rxvt-256color",
+      "/etc/terminfo/s",
+      "/etc/terminfo/s/st-0.8",
+      "/etc/terminfo/s/st-0.8.5",
+      "/etc/terminfo/s/st-16color",
+      "/etc/terminfo/s/st-256color",
+      "/etc/terminfo/s/st-direct",
+      "/etc/terminfo/s/screen",
+      "/etc/terminfo/s/screen-256color",
+      "/etc/terminfo/s/st-0.6",
+      "/etc/terminfo/s/st-0.7",
+      "/etc/terminfo/s/sun",
+      "/etc/terminfo/x",
+      "/etc/terminfo/x/xterm-256color",
+      "/etc/terminfo/x/xterm-color",
+      "/etc/terminfo/x/xterm-xfree86",
+      "/etc/terminfo/x/xterm",
+      "/var/log/apk.log",
+      "/bin/hugetop",
+      "/bin/vmstat",
+      "/bin/w",
+      "/bin/tload",
+      "/bin/slabtop",
+      "/bin/pidwait",
+      "/lib/apk/db/lock"
+    ],
+    "process_operations": [],
+    "network_attempts": [],
+    "registry_operations": [],
+    "system_calls": [],
+    "execution_success": false,
+    "quick_check": true
+  },
+  "ai_analysis": {
+    "vulnerabilities": [
+      {
+        "description": "Type:** Remote Code Execution (RCE)",
+        "severity": "Medium"
+      },
+      {
+        "description": "Severity:** Critical",
+        "severity": "Critical"
+      },
+      {
+        "description": "Location in code:** `processUserInput` function, specifically the `eval(input)` call.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Description:** The `processUserInput` function takes user-supplied input and directly executes it as JavaScript code using `eval()`. This allows an attacker to execute arbitrary code on the victim's machine with the privileges of the web application. This is a textbook example of a dangerous practice.",
+        "severity": "Low"
+      },
+      {
+        "description": "Type:** Cross-Site Scripting (XSS)",
+        "severity": "Medium"
+      },
+      {
+        "description": "Severity:** High",
+        "severity": "High"
+      },
+      {
+        "description": "Location in code:** `updateElement` function, specifically `document.getElementById(id).innerHTML = html;`",
+        "severity": "Medium"
+      },
+      {
+        "description": "Description:** The `updateElement` function takes an HTML string (`html`) and injects it into the DOM using `innerHTML`. If the `html` parameter is not properly sanitized, an attacker can inject malicious JavaScript code that will be executed in the user's browser.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Type:** Code Injection (via `setTimeout`)",
+        "severity": "Medium"
+      },
+      {
+        "description": "Severity:** Medium",
+        "severity": "Medium"
+      },
+      {
+        "description": "Location in code:** `delayedCode` function, specifically `setTimeout(\"console.log('Executed from string')\", 1000);`",
+        "severity": "Medium"
+      },
+      {
+        "description": "Description:** While less severe than `eval()`, using `setTimeout` with a string containing code is a bad practice.  It's vulnerable to injection if the string is constructed dynamically from user input (though this example doesn't show that).  It demonstrates a lack of secure coding practices.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Type:** Potential XSS (via `document.write`)",
+        "severity": "Medium"
+      },
+      {
+        "description": "Severity:** Medium",
+        "severity": "Medium"
+      },
+      {
+        "description": "Location in code:** `displayContent` function, specifically `document.write(content);`",
+        "severity": "Medium"
+      },
+      {
+        "description": "Description:**  Similar to `innerHTML`, `document.write` can be exploited for XSS if the `content` parameter is not properly sanitized.  It directly writes to the document stream, potentially injecting malicious scripts.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Overall Risk:** 95/100",
+        "severity": "Medium"
+      },
+      {
+        "description": "Malicious Website:** The file could be hosted on a compromised or malicious website and executed when a user visits the site.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Phishing Attack:** An attacker could send a phishing email containing a link to a website hosting the file.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Social Engineering:** An attacker could trick a user into manually running the file (though this is less likely with a JavaScript file).",
+        "severity": "Medium"
+      },
+      {
+        "description": "Compromised Dependency:** If this file is a dependency of another application, a compromised dependency management system could lead to its inclusion.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Mitigation Steps:",
+        "severity": "Medium"
+      },
+      {
+        "description": "Remove `eval()`:**  The `eval()` function should be *completely removed* and replaced with a safe alternative.  There are very few legitimate use cases for `eval()`, and they almost always have safer alternatives.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Input Sanitization:**  Implement robust input validation and sanitization for all user-supplied data.  Specifically, escape HTML entities when using `innerHTML` and `document.write`. Use a well-vetted sanitization library.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Avoid `setTimeout` with strings:**  Pass a function directly to `setTimeout` instead of a string containing code.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Principle of Least Privilege:** Ensure the web application runs with the minimum necessary privileges.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Detection Methods:",
+        "severity": "Medium"
+      },
+      {
+        "description": "Static Analysis:** Utilize static analysis tools to automatically detect the use of `eval()` and other potentially dangerous functions.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Dynamic Analysis (Sandboxing):** Execute the file in a sandboxed environment to observe its behavior and identify malicious activity.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Intrusion Detection System (IDS):** Implement an IDS to monitor network traffic for suspicious activity.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Prevention Measures:",
+        "severity": "Medium"
+      },
+      {
+        "description": "User Awareness Training:** Educate users about phishing attacks and other social engineering techniques.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Regular Updates:** Keep all software, including the web server and browser, up to date with the latest security patches.",
+        "severity": "Medium"
+      }
+    ],
+    "risk_assessment": "",
+    "recommendations": [],
+    "threat_vectors": [],
+    "analysis_time": 24.927026748657227,
+    "model_used": "gemma-3-27b-it",
+    "impact_analysis": {},
+    "raw_response": "## Security Analysis: 8ee7a838-a8a9-4dd1-bf66-d17c7c1c7415_application.js\n\n**1. VULNERABILITIES DETECTED:**\n\n* **Type:** Remote Code Execution (RCE)\n    * **Severity:** Critical\n    * **Location in code:** `processUserInput` function, specifically the `eval(input)` call.\n    * **Description:** The `processUserInput` function takes user-supplied input and directly executes it as JavaScript code using `eval()`. This allows an attacker to execute arbitrary code on the victim's machine with the priv..."
+  },
+  "risk_score": 60,
+  "threat_level": "HIGH",
+  "summary": {
+    "quick_verdict": "\ud83d\udea8 High risk - Recommend quarantine",
+    "key_findings": [
+      "Behavioral: 89 suspicious activities",
+      "AI: 1 critical vulnerabilities",
+      "AI: 1 high-risk vulnerabilities"
+    ],
+    "risk_breakdown": {
+      "static_contribution": 0,
+      "behavioral_contribution": 30,
+      "ai_contribution": 30
+    },
+    "action_required": "Exercise extreme caution. Analyze in isolated environment only."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "static_analysis": {
+    "filename": "e5af8956-6dbf-4a0d-8e0e-f434ed65d889_sample1.js",
+    "size": 749,
+    "file_type": "C source, ASCII text",
+    "risk_factors": [],
+    "safe_indicators": [],
+    "verdict": "LIKELY_SAFE",
+    "what_this_means": "\u2705 No obvious malware indicators found. This file appears safe.",
+    "md5": "0d88a848268c3a6ada445060099590ac",
+    "sha256": "dee82bf9c2999706e3bed8e3229b1ce2faaf55540ad68da6a6fbc38267c04d3c",
+    "entropy": 4.54,
+    "risk_score_contrib": 0
+  },
+  "behavioral_analysis": {
+    "execution_success": false,
+    "suspicious_activities": [],
+    "normal_activities": [],
+    "what_happened": "File type .js not executable in behavioral analysis.",
+    "verdict": "NO_BEHAVIOR"
+  },
+  "ai_analysis": {
+    "vulnerabilities": [],
+    "risk_assessment": "LOW - Probably safe",
+    "recommendations": [],
+    "plain_language_summary": "1. Safe\n2. This JavaScript code generates an array of random numbers and calculates their sum, then prints both to the console.\n3. YES\n4. LOW\n",
+    "should_you_run_it": "YES",
+    "analysis_time": 5.124498605728149
+  },
+  "risk_score": 0,
+  "threat_level": "\u2705 SAFE",
+  "user_friendly_summary": {
+    "verdict_icon": "\u2705",
+    "verdict_text": "SAFE",
+    "verdict_color": "green",
+    "one_line_summary": "This file appears to be safe. No malicious patterns were detected.",
+    "risk_factors": [],
+    "what_happened": "File type .js not executable in behavioral analysis.",
+    "ai_says": "1. Safe\n2. This JavaScript code generates an array of random numbers and calculates their sum, then prints both to the console.\n3. YES\n4. LOW\n",
+    "recommendation": "\u2705 Safe to use normally",
+    "for_normal_users": "No problems found. This file looks clean."
+  }
+}

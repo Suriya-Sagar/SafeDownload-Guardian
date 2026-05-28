@@ -1,0 +1,346 @@
+{
+  "static_analysis": {
+    "filename": "7763a8be-82e2-4273-b994-081ce27f074b_sample1.js",
+    "size": 749,
+    "suspicious_indicators": [],
+    "suspicious_strings": [],
+    "yara_matches": [],
+    "entropy": 0,
+    "embedded_urls": [],
+    "ip_addresses": [],
+    "email_addresses": [],
+    "file_signatures": [],
+    "file_type": "C source, ASCII text",
+    "mime_type": "text/x-c",
+    "md5": "0d88a848268c3a6ada445060099590ac",
+    "sha1": "1e34ef4d93eb93363e7826026990c64bd586630f",
+    "sha256": "dee82bf9c2999706e3bed8e3229b1ce2faaf55540ad68da6a6fbc38267c04d3c",
+    "error": "'float' object has no attribute 'bit_length'"
+  },
+  "behavioral_analysis": {
+    "suspicious_activity": [
+      "File operation: /var/log/apk.log",
+      "System binary modification: /bin/hugetop",
+      "System binary modification: /bin/tload",
+      "System binary modification: /bin/w",
+      "System binary modification: /bin/slabtop",
+      "System binary modification: /bin/pidwait",
+      "System binary modification: /bin/vmstat",
+      "File operation: /usr/bin/strace",
+      "File operation: /usr/bin/strace-log-merge",
+      "File operation: /usr/lib/libfts.so.0",
+      "File operation: /usr/lib/libzstd.so.1",
+      "File operation: /usr/lib/libzstd.so.1.5.7",
+      "File operation: /usr/lib/libdw.so.1",
+      "File operation: /usr/lib/libfts.so.0.0.0",
+      "File operation: /usr/lib/libbz2.so.1",
+      "File operation: /usr/lib/libbz2.so.1.0.8",
+      "File operation: /usr/lib/libintl.so.8.4.3",
+      "File operation: /usr/lib/libncursesw.so.6",
+      "File operation: /usr/lib/libproc2.so.1",
+      "File operation: /usr/lib/libbsd.so.0.12.2",
+      "File operation: /usr/lib/libutmps.so.0.1",
+      "File operation: /usr/lib/liblzma.so.5.8.2",
+      "File operation: /usr/lib/libmd.so.0",
+      "File operation: /usr/lib/libmd.so.0.1.0",
+      "File operation: /usr/lib/libproc2.so.1.0.0",
+      "File operation: /usr/lib/libutmps.so.0.1.3.1",
+      "File operation: /usr/lib/libelf-0.194.so",
+      "File operation: /usr/lib/libintl.so.8",
+      "File operation: /usr/lib/liblzma.so.5",
+      "File operation: /usr/lib/libncursesw.so.6.5",
+      "File operation: /usr/lib/libskarnet.so.2.14",
+      "File operation: /usr/lib/libbsd.so.0",
+      "File operation: /usr/lib/libskarnet.so.2.14.4.0",
+      "File operation: /usr/lib/libdw-0.194.so",
+      "File operation: /usr/lib/libelf.so.1",
+      "System config modification: /etc/terminfo",
+      "System config modification: /etc/terminfo/p",
+      "System config modification: /etc/terminfo/p/putty",
+      "System config modification: /etc/terminfo/p/putty-256color",
+      "System config modification: /etc/terminfo/s",
+      "System config modification: /etc/terminfo/s/screen",
+      "System config modification: /etc/terminfo/s/screen-256color",
+      "System config modification: /etc/terminfo/s/st-0.6",
+      "System config modification: /etc/terminfo/s/st-0.7",
+      "System config modification: /etc/terminfo/s/st-0.8",
+      "System config modification: /etc/terminfo/s/st-0.8.5",
+      "System config modification: /etc/terminfo/s/st-16color",
+      "System config modification: /etc/terminfo/s/st-256color",
+      "System config modification: /etc/terminfo/s/st-direct",
+      "System config modification: /etc/terminfo/s/sun",
+      "System config modification: /etc/terminfo/t",
+      "System config modification: /etc/terminfo/t/terminator",
+      "System config modification: /etc/terminfo/t/terminology",
+      "System config modification: /etc/terminfo/t/terminology-0.6.1",
+      "System config modification: /etc/terminfo/t/terminology-1.0.0",
+      "System config modification: /etc/terminfo/t/terminology-1.8.1",
+      "System config modification: /etc/terminfo/t/tmux",
+      "System config modification: /etc/terminfo/t/tmux-256color",
+      "System config modification: /etc/terminfo/v",
+      "System config modification: /etc/terminfo/v/vte-256color",
+      "System config modification: /etc/terminfo/v/vt100",
+      "System config modification: /etc/terminfo/v/vt102",
+      "System config modification: /etc/terminfo/v/vt200",
+      "System config modification: /etc/terminfo/v/vt220",
+      "System config modification: /etc/terminfo/v/vt52",
+      "System config modification: /etc/terminfo/v/vte",
+      "System config modification: /etc/terminfo/a",
+      "System config modification: /etc/terminfo/a/alacritty",
+      "System config modification: /etc/terminfo/a/ansi",
+      "System config modification: /etc/terminfo/r",
+      "System config modification: /etc/terminfo/r/rxvt",
+      "System config modification: /etc/terminfo/r/rxvt-256color",
+      "System config modification: /etc/terminfo/x",
+      "System config modification: /etc/terminfo/x/xterm",
+      "System config modification: /etc/terminfo/x/xterm-256color",
+      "System config modification: /etc/terminfo/x/xterm-color",
+      "System config modification: /etc/terminfo/x/xterm-xfree86",
+      "System config modification: /etc/terminfo/d",
+      "System config modification: /etc/terminfo/d/dumb",
+      "System config modification: /etc/terminfo/g",
+      "System config modification: /etc/terminfo/g/gnome",
+      "System config modification: /etc/terminfo/g/gnome-256color",
+      "System config modification: /etc/terminfo/k",
+      "System config modification: /etc/terminfo/k/konsole",
+      "System config modification: /etc/terminfo/k/konsole-256color",
+      "System config modification: /etc/terminfo/k/konsole-linux",
+      "System config modification: /etc/terminfo/l",
+      "System config modification: /etc/terminfo/l/linux",
+      "File operation: /lib/apk/db/lock"
+    ],
+    "file_operations": [
+      "/var/log/apk.log",
+      "/bin/hugetop",
+      "/bin/tload",
+      "/bin/w",
+      "/bin/slabtop",
+      "/bin/pidwait",
+      "/bin/vmstat",
+      "/usr/bin/strace",
+      "/usr/bin/strace-log-merge",
+      "/usr/lib/libfts.so.0",
+      "/usr/lib/libzstd.so.1",
+      "/usr/lib/libzstd.so.1.5.7",
+      "/usr/lib/libdw.so.1",
+      "/usr/lib/libfts.so.0.0.0",
+      "/usr/lib/libbz2.so.1",
+      "/usr/lib/libbz2.so.1.0.8",
+      "/usr/lib/libintl.so.8.4.3",
+      "/usr/lib/libncursesw.so.6",
+      "/usr/lib/libproc2.so.1",
+      "/usr/lib/libbsd.so.0.12.2",
+      "/usr/lib/libutmps.so.0.1",
+      "/usr/lib/liblzma.so.5.8.2",
+      "/usr/lib/libmd.so.0",
+      "/usr/lib/libmd.so.0.1.0",
+      "/usr/lib/libproc2.so.1.0.0",
+      "/usr/lib/libutmps.so.0.1.3.1",
+      "/usr/lib/libelf-0.194.so",
+      "/usr/lib/libintl.so.8",
+      "/usr/lib/liblzma.so.5",
+      "/usr/lib/libncursesw.so.6.5",
+      "/usr/lib/libskarnet.so.2.14",
+      "/usr/lib/libbsd.so.0",
+      "/usr/lib/libskarnet.so.2.14.4.0",
+      "/usr/lib/libdw-0.194.so",
+      "/usr/lib/libelf.so.1",
+      "/etc/terminfo",
+      "/etc/terminfo/p",
+      "/etc/terminfo/p/putty",
+      "/etc/terminfo/p/putty-256color",
+      "/etc/terminfo/s",
+      "/etc/terminfo/s/screen",
+      "/etc/terminfo/s/screen-256color",
+      "/etc/terminfo/s/st-0.6",
+      "/etc/terminfo/s/st-0.7",
+      "/etc/terminfo/s/st-0.8",
+      "/etc/terminfo/s/st-0.8.5",
+      "/etc/terminfo/s/st-16color",
+      "/etc/terminfo/s/st-256color",
+      "/etc/terminfo/s/st-direct",
+      "/etc/terminfo/s/sun",
+      "/etc/terminfo/t",
+      "/etc/terminfo/t/terminator",
+      "/etc/terminfo/t/terminology",
+      "/etc/terminfo/t/terminology-0.6.1",
+      "/etc/terminfo/t/terminology-1.0.0",
+      "/etc/terminfo/t/terminology-1.8.1",
+      "/etc/terminfo/t/tmux",
+      "/etc/terminfo/t/tmux-256color",
+      "/etc/terminfo/v",
+      "/etc/terminfo/v/vte-256color",
+      "/etc/terminfo/v/vt100",
+      "/etc/terminfo/v/vt102",
+      "/etc/terminfo/v/vt200",
+      "/etc/terminfo/v/vt220",
+      "/etc/terminfo/v/vt52",
+      "/etc/terminfo/v/vte",
+      "/etc/terminfo/a",
+      "/etc/terminfo/a/alacritty",
+      "/etc/terminfo/a/ansi",
+      "/etc/terminfo/r",
+      "/etc/terminfo/r/rxvt",
+      "/etc/terminfo/r/rxvt-256color",
+      "/etc/terminfo/x",
+      "/etc/terminfo/x/xterm",
+      "/etc/terminfo/x/xterm-256color",
+      "/etc/terminfo/x/xterm-color",
+      "/etc/terminfo/x/xterm-xfree86",
+      "/etc/terminfo/d",
+      "/etc/terminfo/d/dumb",
+      "/etc/terminfo/g",
+      "/etc/terminfo/g/gnome",
+      "/etc/terminfo/g/gnome-256color",
+      "/etc/terminfo/k",
+      "/etc/terminfo/k/konsole",
+      "/etc/terminfo/k/konsole-256color",
+      "/etc/terminfo/k/konsole-linux",
+      "/etc/terminfo/l",
+      "/etc/terminfo/l/linux",
+      "/lib/apk/db/lock",
+      "/tmp/7763a8be-82e2-4273-b994-081ce27f074b_sample1.js"
+    ],
+    "process_operations": [],
+    "network_attempts": [],
+    "registry_operations": [],
+    "system_calls": [],
+    "execution_success": false,
+    "quick_check": true
+  },
+  "ai_analysis": {
+    "vulnerabilities": [
+      {
+        "description": "Type:** None directly apparent from static analysis.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Severity:** Low",
+        "severity": "Low"
+      },
+      {
+        "description": "Location in code:** N/A",
+        "severity": "Medium"
+      },
+      {
+        "description": "Overall Risk:** 10/100",
+        "severity": "Medium"
+      },
+      {
+        "description": "Explanation:** The risk is currently very low. The visible portion of the code performs a simple mathematical operation and outputs to the console.  The low entropy suggests it's not packed or encrypted, which would typically indicate an attempt to hide malicious code. However, the truncation of the file is a significant caveat. A complete analysis requires the full file content. The risk could increase dramatically if the omitted code contains malicious functionality.  The risk is not zero because JavaScript, by its nature, can be used for malicious purposes, and the full file hasn't been examined.",
+        "severity": "Low"
+      },
+      {
+        "description": "Social Engineering:** The file could be delivered via phishing or other social engineering techniques, relying on a user to execute it.  Even benign code can be dangerous if it's executed in an untrusted context.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Drive-by Download:** The file could be hosted on a compromised website and downloaded automatically when a user visits the site.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Malicious Advertisement (Malvertising):** The file could be embedded in a malicious advertisement displayed on a legitimate website.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Supply Chain Attack:** If this file is part of a larger software package, it could be introduced during the software development or distribution process.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Remote Code Execution:** Code that allows an attacker to execute arbitrary commands on the victim's system.",
+        "severity": "Low"
+      },
+      {
+        "description": "Data Exfiltration:** Code that steals sensitive data from the victim's system.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Persistence Mechanisms:** Code that ensures the malware runs even after the system is rebooted.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Mitigation Steps:",
+        "severity": "Medium"
+      },
+      {
+        "description": "Do not execute the file until a full analysis is completed.** This is the most important step.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Sandbox Analysis:** Execute the file in a controlled sandbox environment to observe its behavior without risking the host system.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Full File Retrieval:** Obtain the complete file content for a thorough analysis.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Detection Methods:",
+        "severity": "Medium"
+      },
+      {
+        "description": "Dynamic Analysis:** Monitor the file's behavior during execution in a sandbox environment. Look for suspicious network connections, file system modifications, or registry changes.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Behavioral Analysis:** Use endpoint detection and response (EDR) solutions to detect anomalous behavior associated with the file.",
+        "severity": "Medium"
+      },
+      {
+        "description": "YARA Rules (after full file retrieval):** Create YARA rules based on the full file content to identify similar malicious files.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Threat Intelligence Feeds:** Compare the file's hash against threat intelligence feeds to see if it has been previously identified as malicious.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Prevention Measures:",
+        "severity": "Medium"
+      },
+      {
+        "description": "Email Security:** Implement robust email security measures to prevent phishing attacks.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Web Filtering:** Use web filtering to block access to known malicious websites.",
+        "severity": "Medium"
+      },
+      {
+        "description": "User Awareness Training:** Educate users about the risks of social engineering and phishing attacks.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Least Privilege:** Grant users only the minimum necessary privileges to perform their tasks.",
+        "severity": "Medium"
+      },
+      {
+        "description": "Application Whitelisting:** Implement application whitelisting to allow only authorized applications to run on the system.",
+        "severity": "Low"
+      }
+    ],
+    "risk_assessment": "",
+    "recommendations": [],
+    "threat_vectors": [],
+    "analysis_time": 24.119752168655396,
+    "model_used": "gemma-3-27b-it",
+    "impact_analysis": {
+      "assuming_only_the_provided_code_is_present": ""
+    },
+    "raw_response": "## Security Analysis: 7763a8be-82e2-4273-b994-081ce27f074b_sample1.js\n\n**1. VULNERABILITIES DETECTED:**\n\n* **Type:** None directly apparent from static analysis.\n* **Severity:** Low\n* **Location in code:** N/A\n* **Description:** The provided code snippet appears to be benign. It generates a random array of numbers, calculates their sum, and logs the results to the console. There are no immediately obvious vulnerabilities like code injection points, insecure function calls, or attempts to access ..."
+  },
+  "risk_score": 60,
+  "threat_level": "HIGH",
+  "summary": {
+    "quick_verdict": "\ud83d\udea8 High risk - Recommend quarantine",
+    "key_findings": [
+      "Behavioral: 89 suspicious activities"
+    ],
+    "risk_breakdown": {
+      "static_contribution": 0,
+      "behavioral_contribution": 30,
+      "ai_contribution": 30
+    },
+    "action_required": "Exercise extreme caution. Analyze in isolated environment only."
+  }
+}

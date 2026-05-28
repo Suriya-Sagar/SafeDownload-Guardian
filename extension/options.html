@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>File Security Guard - Settings</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f7fafc;
+    }
+    
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    h1 {
+      margin-top: 0;
+      color: #2d3748;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    h1 img {
+      width: 32px;
+      height: 32px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #4a5568;
+    }
+    
+    input[type="text"], input[type="password"], select {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      font-size: 14px;
+      transition: all 0.3s;
+      box-sizing: border-box;
+    }
+    
+    input[type="text"]:focus, input[type="password"]:focus, select:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+    }
+    
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .checkbox-group input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+    }
+    
+    .help-text {
+      font-size: 12px;
+      color: #718096;
+      margin-top: 4px;
+    }
+    
+    .file-types-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 10px;
+      margin: 15px 0;
+      padding: 15px;
+      background: #f7fafc;
+      border-radius: 10px;
+    }
+    
+    .file-type-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 13px;
+    }
+    
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 30px;
+    }
+    
+    button {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .btn-primary {
+      background: #667eea;
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background: #5a67d8;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(102,126,234,0.4);
+    }
+    
+    .btn-secondary {
+      background: #edf2f7;
+      color: #4a5568;
+    }
+    
+    .btn-secondary:hover {
+      background: #e2e8f0;
+    }
+    
+    .status-message {
+      margin-top: 20px;
+      padding: 12px;
+      border-radius: 10px;
+      display: none;
+    }
+    
+    .status-success {
+      background: #c6f6d5;
+      color: #22543d;
+      display: block;
+    }
+    
+    .status-error {
+      background: #fed7d7;
+      color: #742a2a;
+      display: block;
+    }
+    
+    .status-info {
+      background: #bee3f8;
+      color: #2c5282;
+      display: block;
+    }
+    
+    hr {
+      border: none;
+      border-top: 2px solid #e2e8f0;
+      margin: 30px 0;
+    }
+    
+    .version-info {
+      text-align: center;
+      color: #a0aec0;
+      font-size: 12px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>
+      <img src="icons/icon32.png" alt="Logo">
+      File Security Guard Settings
+    </h1>
+    
+    <div class="form-group">
+      <label for="backendUrl">Backend Server URL</label>
+      <input type="text" id="backendUrl" placeholder="http://localhost:5000">
+      <div class="help-text">URL where your file-sandbox is running</div>
+    </div>
+    
+    <div class="form-group">
+      <label for="apiKey">API Key (Optional)</label>
+      <input type="password" id="apiKey" placeholder="Enter API key if required">
+      <div class="help-text">Only if your backend requires authentication</div>
+    </div>
+    
+    <div class="form-group checkbox-group">
+      <input type="checkbox" id="enabled" checked>
+      <label for="enabled" style="margin-bottom: 0;">Enable download protection</label>
+    </div>
+    
+    <div class="form-group checkbox-group">
+      <input type="checkbox" id="notifications" checked>
+      <label for="notifications" style="margin-bottom: 0;">Show notifications</label>
+    </div>
+    
+    <div class="form-group checkbox-group">
+      <input type="checkbox" id="autoOpen" checked>
+      <label for="autoOpen" style="margin-bottom: 0;">Auto-open dashboard on analysis</label>
+    </div>
+    
+    <hr>
+    
+    <h3>📁 Monitored File Types</h3>
+    <div class="file-types-grid" id="fileTypes">
+      <!-- Will be populated by JavaScript -->
+    </div>
+    <div class="help-text">Files with these extensions will be intercepted</div>
+    
+    <hr>
+    
+    <div class="button-group">
+      <button class="btn-primary" id="saveBtn">💾 Save Settings</button>
+      <button class="btn-secondary" id="testBtn">🔌 Test Connection</button>
+      <button class="btn-secondary" id="resetBtn">↻ Reset</button>
+    </div>
+    
+    <div id="statusMessage" class="status-message"></div>
+    
+    <div class="version-info">
+      Version 1.0.0 | Made with 🛡️ for your security
+    </div>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html>

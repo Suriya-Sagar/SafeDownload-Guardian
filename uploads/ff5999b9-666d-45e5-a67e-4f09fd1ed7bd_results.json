@@ -1,0 +1,24 @@
+{
+  "static_analysis": {
+    "filename": "ff5999b9-666d-45e5-a67e-4f09fd1ed7bd_sample1_3.js",
+    "size": 749,
+    "suspicious_indicators": [
+      "Executable extension: .js"
+    ],
+    "suspicious_strings": [],
+    "file_type": "C source, ASCII text",
+    "mime_type": "text/x-c",
+    "md5": "0d88a848268c3a6ada445060099590ac",
+    "sha1": "1e34ef4d93eb93363e7826026990c64bd586630f",
+    "sha256": "dee82bf9c2999706e3bed8e3229b1ce2faaf55540ad68da6a6fbc38267c04d3c",
+    "risk_level": "MEDIUM"
+  },
+  "behavioral_analysis": {
+    "suspicious_activity": [],
+    "file_operations": [],
+    "quick_check": true,
+    "error": "400 Client Error for http+docker://localhost/v1.53/containers/7c8bdae4b9261681d7acda07543e8061e054aa"
+  },
+  "risk_score": 30,
+  "threat_level": "LOW"
+}
